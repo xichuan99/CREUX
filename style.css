@@ -1,0 +1,651 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.nav {
+    position: fixed;
+    width: 100vw;
+    height: 240px;
+    background-image: linear-gradient(to bottom, rgb(0,0,0,1), rgba(0,0,0,0));
+    z-index: 2;
+}
+
+.nav-line {
+    position: fixed;
+    width: 100vw;
+    height: 6px;
+    background-color: #ffffff;
+}
+
+.nav-logo-sq {
+    position: absolute;
+    width: 136px;
+    height: 118px;
+    left: 153px;
+    top: 0px;
+    background-color: #ffffff;
+}
+
+.logo {
+    position: absolute;
+    width: 106px;
+    height: 80px;
+    left: 15px;
+    bottom: 15px;
+}
+
+.lang-cont {
+    position: absolute;
+    width: 88px;
+    height: 20px;
+    right: 228px;
+    top: 54px;
+}
+
+.lang-txt {
+    position: absolute;
+    width: 53px;
+    height: 15px;
+    left: 0px;
+    top: 2.5px;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+.dr-icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 0px;
+    top: 0px;
+}
+
+.menu-icon {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    right: 172px;
+    top: 48px;
+}
+
+#teampage {
+    position: relative;
+    width: 100%;
+    height: calc(2757px - 232px);
+}
+
+#main-car {
+    position: absolute;
+    width: 100%;
+    height: 691px;
+    left: 0px;
+    top: 0px;
+    background-color: rgb(127, 127, 127);
+    z-index: 1;
+}
+
+.main-car-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    background-color: aquamarine;
+}
+
+.item-active {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: bisque;
+    z-index: 1;
+}
+
+.item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: bisque;
+}
+
+.car-item-title {
+    position: absolute;
+    width: 279px;
+    height: 48px;
+    left: calc(50% - 140px);
+    top: 400px;
+    z-index: 2;
+
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    color: #ffffff;
+}
+
+.car-item-txt {
+    position: absolute;
+    width: 522px;
+    height: 64px;
+    left: calc(50% - 261px);
+    top: 464px;
+    z-index: 2;
+
+    font-family: 'Ubuntu';
+    font-style: normal;
+    text-align: center;
+    font-weight: 400;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.ovl-car {
+    position: absolute;
+    width: 100%;
+    height: 400px;
+    bottom: 0px;
+    background-image: linear-gradient(to bottom, rgb(0,0,0,0), rgba(0,0,0,1));
+}
+
+.left-car-ctrl {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    left: 132px;
+    top: 304px;
+    z-index: 3;
+}
+
+.right-car-ctrl {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    right: 132px;
+    top: 304px;
+    z-index: 3;
+}
+
+.left-icon {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.right-icon {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.scrll-icon {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: calc(50% - 20px);
+    top: 564px;
+    z-index: 4;
+}
+
+.bg {
+    position: absolute;
+    width: 100%;
+    height: calc(2757px - 232px);
+    background-color: #260A73;
+}
+
+.bg-overlay-top {
+    position: absolute;
+    width: 100%;
+    height: 551px;
+    top: 691px;
+    background-image: linear-gradient(to bottom, rgb(0,0,0,1), rgba(0,0,0,0));
+}
+
+.bg-ornament {
+    position: absolute;
+    width: 100%;
+    height: 1333px;
+    top: 1137px;
+}
+
+.bg-overlay-btm {
+    position: absolute;
+    width: 100%;
+    height: 226px;
+    bottom: 0px;
+    background-image: linear-gradient(to bottom, rgb(0,0,0,0), rgba(0,0,0,1));
+}
+
+.footer {
+    position: relative;
+    width: 100%;
+    height: 232px;
+    left: 0px;
+    background-color: black;
+    z-index: 2;
+}
+
+.partners-title {
+    position: absolute;
+    width: 106px;
+    height: 24px;
+    left: calc(50% - 53px);
+    top: 800px;
+
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    color: white;
+}
+
+.partners-line-left {
+    position: absolute;
+    width: 207px;
+    height: 0px;
+    left: 0px;
+    top: 909px;
+    background-color: white;
+
+    border: 4px solid #FFFFFF;
+    border-radius: 0px 4px 4px 0px;
+}
+
+.partners-line-right {
+    position: absolute;
+    width: 207px;
+    height: 0px;
+    right: 0px;
+    top: 909px;
+    background-color: white;
+
+    border: 4px solid #FFFFFF;
+    border-radius: 4px 0px 0px 4px;
+}
+
+#partners-car {
+    position: absolute;
+    width: 778px;
+    height: 87px;
+    left: calc(50% - 389px);
+    top: 853px;
+    overflow-x: hidden;
+    cursor: grab;
+}
+
+.pcar-inner {
+    position: absolute;
+    width: 1556px;
+    height: 100%;
+}
+
+.pcar-item {
+    position: relative;
+    width: 126px;
+    height: 100%;
+    float: left;
+    margin-left: 37px;
+}
+
+.pcar-item:nth-child(1) {
+    margin-left: 0px;
+}
+
+.pcar-item:nth-child(6) {
+    margin-left: 0px;
+}
+
+.partners-btn {
+    position: absolute;
+    width: 178px;
+    height: 40px;
+    left: calc(50% - 178px/2);
+    top: 968px;
+    background-color: #552DC2;
+}
+
+.partners-btn-txt {
+    position: absolute;
+    width: 102px;
+    height: 24px;
+    left: calc(50% - 51px);
+    top: calc(50% - 12px);
+
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+}
+
+.partners-btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0 15px rgb(104, 55, 238);
+}
+
+.matches-title {
+    position: absolute;
+    width: 85px;
+    height: 24px;
+    left: calc(50% - 42.5px);
+    top: 1088px;
+
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    color: white;
+}
+
+#matches-car {
+    position: absolute;
+    width: 1151px;
+    height: 176px;
+    left: calc(50% - 575.5px);
+    top: 1144px;
+    overflow-x: hidden;
+    cursor: grab;
+}
+
+.mcar-inner {
+    position: absolute;
+    width: 1733px;
+    height: 100%;
+    left: calc(0% - 283.5px);
+}
+
+.mcar-item {
+    position: relative;
+    width: 567px;
+    height: 100%;
+    background-color: #232323;
+    margin-left: 16px;
+    float: left;
+}
+
+.mcar-item:nth-child(1) {
+    margin-left: 0px;
+}
+
+.mcar-item-line {
+    position: absolute;
+    width: 100%;
+    height: 8px;
+    top: 0px;
+    background-color: #916FEC;
+}
+
+.mcar-item-logo {
+    position: absolute;
+    width: 141px;
+    height: 133px;
+    left: 18px;
+    top: 21px;
+}
+
+.mcar-item-title {
+    position: absolute;
+    width: 294px;
+    height: 83px;
+    left: 188px;
+    top: 35px;
+}
+
+h2 {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+
+    color: #FFFFFF;
+}
+
+.mcar-item-date {
+    position: absolute;
+    width: 137px;
+    height: 19px;
+    left: 188px;
+    bottom: 35px;
+}
+
+h3 {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #FFFFFF;
+}
+
+.matches-btn {
+    position: absolute;
+    width: 178px;
+    height: 40px;
+    left: calc(50% - 178px/2);
+    top: 1352px;
+    background-color: #552DC2;
+}
+
+.matches-btn-txt {
+    position: absolute;
+    width: 102px;
+    height: 24px;
+    left: calc(50% - 51px);
+    top: calc(50% - 12px);
+
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+}
+
+.matches-btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0 15px rgb(104, 55, 238);
+}
+
+.teams-title {
+    position: absolute;
+    width: 65px;
+    height: 24px;
+    left: calc(50% - 32.5px);
+    top: 1472px;
+
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    color: white;
+}
+
+#teams-car {
+    position: absolute;
+    width: 1151px;
+    height: 436px;
+    left: calc(50% - 575.5px);
+    top: 1528px;
+    overflow-x: hidden;
+    cursor: grab;
+}
+
+.tcar-inner {
+    position: absolute;
+    width: 1748px;
+    height: 100%;
+    left: calc(0% - 162px);
+}
+
+.tcar-item {
+    position: relative;
+    width: 324px;
+    height: 100%;
+    margin-left: 32px;
+    float: left;
+}
+
+.tcar-item:nth-child(1) {
+    margin-left: 0px;
+}
+
+.tcar-item-logo {
+    position: absolute;
+    width: 138px;
+    height: 80px;
+    left: 92px;
+    top: 11px;
+}
+
+.tcar-item-title {
+    position: absolute;
+    width: 231px;
+    height: 78px;
+    left: 47px;
+    top: 91px;
+}
+
+h4 {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.teams-btn {
+    position: absolute;
+    width: 178px;
+    height: 40px;
+    left: calc(50% - 178px/2);
+    top: 2000px;
+    background-color: #552DC2;
+}
+
+.teams-btn-txt {
+    position: absolute;
+    width: 102px;
+    height: 24px;
+    left: calc(50% - 51px);
+    top: calc(50% - 12px);
+
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+}
+
+.teams-btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0 15px rgb(104, 55, 238);
+}
+
+.stt-img {
+    position: absolute;
+    width: 558px;
+    height: 342px;
+    left: 280px;
+    bottom: 0px;
+}
+
+.stt-title {
+    position: absolute;
+    width: 203px;
+    height: 39px;
+    right: 425px;
+    bottom: 234px;
+    z-index: 2;
+
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    color: white;
+}
+
+.stt-txt {
+    position: absolute;
+    width: 467px;
+    height: 135px;
+    right: 164px;
+    top: 2301px;
+    display: flex;
+    z-index: 2;
+}
+
+h1 {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    text-align: justify;
+    line-height: 26px;
+    color: white;
+}
+
+.ftr-logo {
+    position: absolute;
+    width: 82px;
+    height: 58px;
+    left: 109px;
+    top: 35px;
+}
+
+.ftr-copyright {
+    position: absolute;
+    width: 71px;
+    height: 15px;
+    left: 109px;
+    top: 109px;
+
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    color: white;
+}
+
+.socmed-cont {
+    position: absolute;
+    width: 256px;
+    height: 32px;
+    right: 112px;
+    top: 44px;
+}
+
+.socmed-icon {
+    position: relative;
+    width: 32px;
+    height: 100%;
+    margin-left: 24px;
+    float: left;
+}
+
+.socmed-icon:nth-child(1) {
+    margin-left: 0px;
+}
+
+.ftr-email-txt {
+    position: absolute;
+    width: 138px;
+    height: 19px;
+    right: 107px;
+    top: 106px;
+
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: white;
+}
