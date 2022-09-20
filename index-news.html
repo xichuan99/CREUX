@@ -1,0 +1,213 @@
+<html>
+    <head>
+        <link rel="shortcut icon" href="Assets/creux_favicon.png" type=“image/png”>
+        <title>CREUX</title>
+        <link rel="stylesheet" href="style-news.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+        </style>
+    </head>
+
+    <body>
+        
+        <!--navigation-->
+        <div id="nav">
+            <div class="nav-ovl"></div>
+        </div>
+
+        <!-- pop nav -->
+        <div id="menu-ovl" class="close" style="display: none;">
+                <div class="menu-cont">
+                    <div class="menu-cont-v2" onclick="location.href='index-team.html'">
+                        <div class="menu-numb">01</div>
+                        <div class="menu-txt">TEAMS</div>
+                    </div>
+                    <div class="menu-cont-v2" onclick="location.href='index-matches.html'">
+                        <div class="menu-numb">02</div>
+                        <div class="menu-txt">MATCHES</div>
+                    </div>
+                    <div class="menu-cont-v2 active" onclick="location.href='index-news.html'">
+                        <div class="menu-numb">03</div>
+                        <div class="menu-txt">NEWS</div>
+                    </div>
+                    <div class="menu-cont-v2" onclick="location.href='index-partners.html'">
+                        <div class="menu-numb">04</div>
+                        <div class="menu-txt">PARTNERS</div>
+                    </div>
+                    <div class="menu-cont-v2" onclick="location.href='index-contact.html'">
+                        <div class="menu-numb">05</div>
+                        <div class="menu-txt">CONTACT</div>
+                    </div>
+                </div>
+        </div>
+
+        <!-- original nav -->
+        <div class="nav-line"></div>
+        <div class="nav-logo-sq">
+            <div class="logo" onclick="location.href='index-team.html'" style="background-image: url('Assets/CREUX_logo_full color_SVG.svg'); background-size: cover;
+            background-repeat: no-repeat;"></div>
+        </div>
+        <!-- input (later)
+        <div class="input-cont">
+                <select id="country" name="country" placeholder="Country"; class="dropdown">
+                        <option value="Afganistan">English</option>
+                        <option value="Albania">Indonesia</option>
+                    </select>
+
+                    </form>
+                    <hr class="hr-email"></hr>
+                    <hr class="hr-drpdown"></hr>
+        </div>
+        -->
+        <div class="lang-cont">
+            <div class="lang-txt">ENGLISH</div>
+            <div class="dr-icon" style="background-image: url('Assets/dropdown.svg'); background-size: cover;
+            background-repeat: no-repeat;"></div>
+        </div>
+        <div id="on-off" class="menu-icon" style="background-image: url('Assets/burger-menu.svg'); background-size: cover;
+        background-repeat: no-repeat;" onclick="myFunction()"></div>
+        <!--script open-close menu overlay-->
+        <script>
+            function myFunction() {
+                var x = document.getElementById("menu-ovl");
+                var y = document.getElementById("on-off");
+                if (x.style.display === "none") {
+                  x.style.display = "block";
+                  x.style.animation="move 1s 1";
+                  y.style.backgroundImage="url(Assets/x-icon.svg)";
+                  y.style.animation="fadeIn 2s";
+                } else {
+                  x.style.animation="move2 1s 1";
+                  setTimeout(function() {
+                        x.style.display = "none";
+                    }, 1000);
+                  y.style.backgroundImage="url(Assets/burger-menu.svg)";
+                  y.style.animation="fadeIn2 2s";
+                }
+            }
+        </script>
+        
+        <!-- news page-->
+        <section id="news">
+            <div class="nbg"></div>
+            <div class="nbg-overlay-btm"></div>
+            <div class="hr-line"></div>
+            <div class="main-n-car">
+                <div class="mn-card">
+                    <div class="mn-image" style="background-image: url('Assets/image dummy1.jpg'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="mn-top-line"></div>
+                    <div class="mn-lbl-ovl">
+                        <div class="mn-lbl-txt">PUBGM</div>
+                    </div>
+                    <div class="mn-date">XX February 2023</div>
+                    <div class="mn-title">Lorem Ipsum dolor sit amet consectuter</div>
+                    <div class="mn-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nunc
+                    ligula, finibus eu est id, ornare sollicitudin urna. Sed pulvinar mattis
+                    ornare. Pellentesque vel nunc erat. Donec quis cursus est. Vestibulum
+                    ante ipsum primis in faucibus orci luctus et ultrices posuere
+                    cubilia curae.</div>
+                    <div class="mn-btn">
+                        <div class="mn-btn-txt">READ MORE</div>
+                    </div>
+                </div>
+            </div>
+            <div class="n-car">
+                <div class="n-card">
+                    <div class="n-image" style="background-image: url('Assets/image dummy1.jpg'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="n-lbl-ovl">
+                        <div class="n-lbl-txt">Mobile Legends</div>
+                    </div>
+                    <div class="n-date">XX February 2023</div>
+                    <div class="n-title">Lorem Ipsum dolor sit amet. consect etur adipiscing elit.</div>
+                </div>
+                <div class="n-card">
+                    <div class="n-image" style="background-image: url('Assets/image dummy1.jpg'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="n-lbl-ovl">
+                        <div class="n-lbl-txt">Mobile Legends</div>
+                    </div>
+                    <div class="n-date">XX February 2023</div>
+                    <div class="n-title">Lorem Ipsum dolor sit amet. consect etur adipiscing elit.</div>
+                </div>
+                <div class="n-card">
+                    <div class="n-image" style="background-image: url('Assets/image dummy1.jpg'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="n-lbl-ovl">
+                        <div class="n-lbl-txt">Mobile Legends</div>
+                    </div>
+                    <div class="n-date">XX February 2023</div>
+                    <div class="n-title">Lorem Ipsum dolor sit amet. consect etur adipiscing elit.</div>
+                </div>
+                <div class="n-card">
+                    <div class="n-image" style="background-image: url('Assets/image dummy1.jpg'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="n-lbl-ovl">
+                        <div class="n-lbl-txt">Mobile Legends</div>
+                    </div>
+                    <div class="n-date">XX February 2023</div>
+                    <div class="n-title">Lorem Ipsum dolor sit amet. consect etur adipiscing elit.</div>
+                </div>
+                <div class="n-card">
+                    <div class="n-image" style="background-image: url('Assets/image dummy1.jpg'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="n-lbl-ovl">
+                        <div class="n-lbl-txt">Mobile Legends</div>
+                    </div>
+                    <div class="n-date">XX February 2023</div>
+                    <div class="n-title">Lorem Ipsum dolor sit amet. consect etur adipiscing elit.</div>
+                </div>
+                <div class="n-card">
+                    <div class="n-image" style="background-image: url('Assets/image dummy1.jpg'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="n-lbl-ovl">
+                        <div class="n-lbl-txt">Mobile Legends</div>
+                    </div>
+                    <div class="n-date">XX February 2023</div>
+                    <div class="n-title">Lorem Ipsum dolor sit amet. consect etur adipiscing elit.</div>
+                </div>
+            </div>
+        </section>
+       
+        <!-- footer -->
+        <div class="footer">
+            <div class="ftr-logo" style="background-image: url('Assets/CREUX_logo_all white_png.png'); background-size: cover;
+            background-repeat: no-repeat;"></div>
+            <div class="ftr-copyright">©creuxteam</div>
+            <div class="socmed-cont">
+                <div class="socmed-icon" style="background-image: url('Assets/tiktok.svg'); background-size: cover;
+                background-repeat: no-repeat;"></div>
+                <div class="socmed-icon" style="background-image: url('Assets/yutub.svg'); background-size: cover;
+                background-repeat: no-repeat;"></div>
+                <div class="socmed-icon" style="background-image: url('Assets/twitter.svg'); background-size: cover;
+                background-repeat: no-repeat;"></div>
+                <div class="socmed-icon" style="background-image: url('Assets/fb.svg'); background-size: cover;
+                background-repeat: no-repeat;"></div>
+                <div class="socmed-icon" style="background-image: url('Assets/ig.svg'); background-size: cover;
+                background-repeat: no-repeat;"></div>
+            </div>
+            <div class="ftr-email-txt">contact@creux.co</div>
+        </div>
+
+        <!-- horizontal scroll -->
+        <script>
+            const scrollContainer1 = document.querySelector(".partners-car");
+            const scrollContainer2 = document.querySelector(".matches-car");
+            const scrollContainer3 = document.querySelector(".teams-car");
+            const scrollContainer4 = document.querySelector(".g-teams-car-cont-ml");
+            const scrollContainer5 = document.querySelector(".g-teams-car-cont-pubgm");
+            const scrollContainer6 = document.querySelector(".g-teams-car-cont-wr");
+
+            [scrollContainer1, scrollContainer2,
+            scrollContainer3, scrollContainer4,
+            scrollContainer5, scrollContainer6,].forEach((scrollContainer)=>{
+                scrollContainer.addEventListener("wheel", (evt) => {
+                    evt.preventDefault();
+                    scrollContainer.scrollLeft += evt.deltaY;
+                });
+            });
+        </script>
+    </body>
+</html>

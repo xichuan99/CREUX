@@ -1,0 +1,609 @@
+<html>
+    <head>
+        <link rel="shortcut icon" href="Assets/creux_favicon.png" type=“image/png”>
+        <title>CREUX</title>
+        <link rel="stylesheet" href="style-matches.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        
+        <!--navigation-->
+        <div id="nav">
+            <div class="nav-ovl"></div>
+        </div>
+
+        <!-- pop nav -->
+        <div id="menu-ovl" class="close" style="display: none;">
+                <div class="menu-cont">
+                    <div class="menu-cont-v2" onclick="location.href='index-team.html'">
+                        <div class="menu-numb">01</div>
+                        <div class="menu-txt">TEAMS</div>
+                    </div>
+                    <div class="menu-cont-v2 active" onclick="location.href='index-matches.html'">
+                        <div class="menu-numb">02</div>
+                        <div class="menu-txt">MATCHES</div>
+                    </div>
+                    <div class="menu-cont-v2" onclick="location.href='index-news.html'">
+                        <div class="menu-numb">03</div>
+                        <div class="menu-txt">NEWS</div>
+                    </div>
+                    <div class="menu-cont-v2" onclick="location.href='index-partners.html'">
+                        <div class="menu-numb">04</div>
+                        <div class="menu-txt">PARTNERS</div>
+                    </div>
+                    <div class="menu-cont-v2" onclick="location.href='index-contact.html'">
+                        <div class="menu-numb">05</div>
+                        <div class="menu-txt">CONTACT</div>
+                    </div>
+                </div>
+        </div>
+
+        <!-- original nav -->
+        <div class="nav-line"></div>
+        <div class="nav-logo-sq">
+            <div class="logo" onclick="location.href='index-team.html'" style="background-image: url('Assets/CREUX_logo_full color_SVG.svg'); background-size: cover;
+            background-repeat: no-repeat;"></div>
+        </div>
+        <!-- input (later)
+        <div class="input-cont">
+                <select id="country" name="country" placeholder="Country"; class="dropdown">
+                        <option value="Afganistan">English</option>
+                        <option value="Albania">Indonesia</option>
+                    </select>
+
+                    </form>
+                    <hr class="hr-email"></hr>
+                    <hr class="hr-drpdown"></hr>
+        </div>
+        -->
+        <div class="lang-cont">
+            <div class="lang-txt">ENGLISH</div>
+            <div class="dr-icon" style="background-image: url('Assets/dropdown.svg'); background-size: cover;
+            background-repeat: no-repeat;"></div>
+        </div>
+        <div id="on-off" class="menu-icon" style="background-image: url('Assets/burger-menu.svg'); background-size: cover;
+        background-repeat: no-repeat;" onclick="myFunction()"></div>
+        <!--script open-close menu overlay-->
+        <script>
+            function myFunction() {
+                var x = document.getElementById("menu-ovl");
+                var y = document.getElementById("on-off");
+                if (x.style.display === "none") {
+                  x.style.display = "block";
+                  x.style.animation="move 1s 1";
+                  y.style.backgroundImage="url(Assets/x-icon.svg)";
+                  y.style.animation="fadeIn 2s";
+                } else {
+                  x.style.animation="move2 1s 1";
+                  setTimeout(function() {
+                        x.style.display = "none";
+                    }, 1000);
+                  y.style.backgroundImage="url(Assets/burger-menu.svg)";
+                  y.style.animation="fadeIn2 2s";
+                }
+            }
+        </script>
+        
+        <!-- matches page-->
+        <section id="matches">
+            <div class="mbg">
+                <div class="mbg-ornament" style="background-image: url('Assets/ornament_single color_cropped.svg'); background-size: cover;
+                background-repeat: no-repeat;"></div>
+            </div>
+            <div class="game-menu-cont">
+                <div class="game-txt" onclick="location.href='index-matches.html'">PUBGM</div>
+                <div class="game-txt" onclick="location.href='index-matches-sub2.html'">Mobile Legends</div>
+                <div class="game-txt" onclick="location.href='index-matches-sub3.html'">Wild Rift</div>
+                <div class="game-txt active" onclick="location.href='index-matches-sub4.html'">Free Fire</div>
+                <div class="game-txt" onclick="location.href='index-matches-sub5.html'">Valorant</div>
+            </div>
+
+            <!-- <script>
+            var PUBGM = document.getElementById("matches-PUBGM");
+            var ML = document.getElementById("matches-ML");
+            var WR = document.getElementById("matches-WR");
+            var FF = document.getElementById("matches-FF");
+            var V = document.getElementById("matches-V");
+            function Fpubgm() {
+                if (PUBGM.style.display === "none") {
+                    PUBGM.style.display = "block";
+                  x.style.animation="move 1s 1";
+                  y.style.backgroundImage="url(Assets/x-icon.svg)";
+                  y.style.animation="fadeIn 2s";
+                } else {
+                  x.style.animation="move2 1s 1";
+                  setTimeout(function() {
+                        x.style.display = "none";
+                    }, 1000);
+                  y.style.backgroundImage="url(Assets/burger-menu.svg)";
+                  y.style.animation="fadeIn2 2s";
+                }
+            }
+            </script> -->
+        
+            <div class="vline"></div>
+            <div class="info-cont" id="matches-PUBGM">
+                <div class="s-logo" style="background-image: url('Assets/esl-logo-vector.svg'); background-size: cover;
+                background-repeat: no-repeat;"></div>
+                <div class="l-logo" style="background-image: url('Assets/logo turney.png'); background-size: cover;
+                background-repeat: no-repeat;"></div>
+                <div class="info-title">Lorem Ipsum</div>
+                <div class="info-txt">Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit.Donec nunc ligula, finibus eu est id, ornare sollicitudin urna. Sed pulvinar
+                mattis ornare. Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit.Donec nunc ligula, finibus eu est id, ornare sollicitudin urna. Sed pulvinar
+                mattis ornare Lorem Ipsum.
+                </div>
+            </div>
+            <div class="info-cont" id="matches-ML">
+                <div class="s-logo" style="background-image: url('Assets/esl-logo-vector.svg'); background-size: cover;
+                background-repeat: no-repeat;"></div>
+                <div class="l-logo" style="background-image: url('Assets/logo turney.png'); background-size: cover;
+                background-repeat: no-repeat;"></div>
+                <div class="info-title">Lorem Ipsum</div>
+                <div class="info-txt">Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit.Donec nunc ligula, finibus eu est id, ornare sollicitudin urna. Sed pulvinar
+                mattis ornare. Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit.Donec nunc ligula, finibus eu est id, ornare sollicitudin urna. Sed pulvinar
+                mattis ornare Lorem Ipsum.
+                </div>
+            </div>
+            <div class="info-cont" id="matches-WR">
+                <div class="s-logo" style="background-image: url('Assets/esl-logo-vector.svg'); background-size: cover;
+                background-repeat: no-repeat;"></div>
+                <div class="l-logo" style="background-image: url('Assets/logo turney.png'); background-size: cover;
+                background-repeat: no-repeat;"></div>
+                <div class="info-title">Lorem Ipsum</div>
+                <div class="info-txt">Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit.Donec nunc ligula, finibus eu est id, ornare sollicitudin urna. Sed pulvinar
+                mattis ornare. Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit.Donec nunc ligula, finibus eu est id, ornare sollicitudin urna. Sed pulvinar
+                mattis ornare Lorem Ipsum.
+                </div>
+            </div>
+            <div class="info-cont" id="matches-FF">
+                <div class="s-logo" style="background-image: url('Assets/esl-logo-vector.svg'); background-size: cover;
+                background-repeat: no-repeat;"></div>
+                <div class="l-logo" style="background-image: url('Assets/logo turney.png'); background-size: cover;
+                background-repeat: no-repeat;"></div>
+                <div class="info-title">Lorem Ipsum</div>
+                <div class="info-txt">Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit.Donec nunc ligula, finibus eu est id, ornare sollicitudin urna. Sed pulvinar
+                mattis ornare. Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit.Donec nunc ligula, finibus eu est id, ornare sollicitudin urna. Sed pulvinar
+                mattis ornare Lorem Ipsum.
+                </div>
+            </div>
+            <div class="info-cont" id="matches-V">
+                <div class="s-logo" style="background-image: url('Assets/esl-logo-vector.svg'); background-size: cover;
+                background-repeat: no-repeat;"></div>
+                <div class="l-logo" style="background-image: url('Assets/logo turney.png'); background-size: cover;
+                background-repeat: no-repeat;"></div>
+                <div class="info-title">Lorem Ipsum</div>
+                <div class="info-txt">Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit.Donec nunc ligula, finibus eu est id, ornare sollicitudin urna. Sed pulvinar
+                mattis ornare. Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit.Donec nunc ligula, finibus eu est id, ornare sollicitudin urna. Sed pulvinar
+                mattis ornare Lorem Ipsum.
+                </div>
+            </div>
+
+
+            <div class="recent-title">Past Results</div>
+            <div class="recent-cont" id="matches-PUBGM">
+                <div class="recent-card">
+                    <div class="card-ovl"></div>
+                    <div class="card-line-top"></div>
+                    <div class="card-line-ctr1"></div>
+                    <div class="card-line-ctr2"></div>
+                    <div class="card-line-btm1"></div>
+                    <div class="card-line-btm2"></div>
+                    <div class="card-date">XX February 2023</div>
+                    <div class="card-i">BO3</div>
+                    <div class="card-logo1" style="background-image: url('Assets/LOGO_RRQ_orange_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-logo2" style="background-image: url('Assets/CREUX_logo_all white_png_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-title">Pro Gaming Series II</div>
+                    <div class="card-vs">VS</div>
+                    <div class="card-numb1">1</div>
+                    <div class="card-numb2">2</div>
+                </div>
+                <div class="recent-card">
+                    <div class="card-ovl"></div>
+                    <div class="card-line-top"></div>
+                    <div class="card-line-ctr1"></div>
+                    <div class="card-line-ctr2"></div>
+                    <div class="card-line-btm1"></div>
+                    <div class="card-line-btm2"></div>
+                    <div class="card-date">XX February 2023</div>
+                    <div class="card-i">BO3</div>
+                    <div class="card-logo1" style="background-image: url('Assets/LOGO_RRQ_orange_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-logo2" style="background-image: url('Assets/CREUX_logo_all white_png_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-title">Pro Gaming Series II</div>
+                    <div class="card-vs">VS</div>
+                    <div class="card-numb1">1</div>
+                    <div class="card-numb2">2</div>
+                </div>
+                <div class="recent-card">
+                    <div class="card-ovl"></div>
+                    <div class="card-line-top"></div>
+                    <div class="card-line-ctr1"></div>
+                    <div class="card-line-ctr2"></div>
+                    <div class="card-line-btm1"></div>
+                    <div class="card-line-btm2"></div>
+                    <div class="card-date">XX February 2023</div>
+                    <div class="card-i">BO3</div>
+                    <div class="card-logo1" style="background-image: url('Assets/LOGO_RRQ_orange_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-logo2" style="background-image: url('Assets/CREUX_logo_all white_png_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-title">Pro Gaming Series II</div>
+                    <div class="card-vs">VS</div>
+                    <div class="card-numb1">1</div>
+                    <div class="card-numb2">2</div>
+                </div>
+                <div class="recent-card">
+                    <div class="card-ovl"></div>
+                    <div class="card-line-top"></div>
+                    <div class="card-line-ctr1"></div>
+                    <div class="card-line-ctr2"></div>
+                    <div class="card-line-btm1"></div>
+                    <div class="card-line-btm2"></div>
+                    <div class="card-date">XX February 2023</div>
+                    <div class="card-i">BO3</div>
+                    <div class="card-logo1" style="background-image: url('Assets/LOGO_RRQ_orange_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-logo2" style="background-image: url('Assets/CREUX_logo_all white_png_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-title">Pro Gaming Series II</div>
+                    <div class="card-vs">VS</div>
+                    <div class="card-numb1">1</div>
+                    <div class="card-numb2">2</div>
+                </div>
+            </div>
+            <div class="recent-cont" id="matches-ML">
+                <div class="recent-card">
+                    <div class="card-ovl"></div>
+                    <div class="card-line-top"></div>
+                    <div class="card-line-ctr1"></div>
+                    <div class="card-line-ctr2"></div>
+                    <div class="card-line-btm1"></div>
+                    <div class="card-line-btm2"></div>
+                    <div class="card-date">XX February 2023</div>
+                    <div class="card-i">BO3</div>
+                    <div class="card-logo1" style="background-image: url('Assets/LOGO_RRQ_orange_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-logo2" style="background-image: url('Assets/CREUX_logo_all white_png_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-title">Pro Gaming Series II</div>
+                    <div class="card-vs">VS</div>
+                    <div class="card-numb1">1</div>
+                    <div class="card-numb2">2</div>
+                </div>
+                <div class="recent-card">
+                    <div class="card-ovl"></div>
+                    <div class="card-line-top"></div>
+                    <div class="card-line-ctr1"></div>
+                    <div class="card-line-ctr2"></div>
+                    <div class="card-line-btm1"></div>
+                    <div class="card-line-btm2"></div>
+                    <div class="card-date">XX February 2023</div>
+                    <div class="card-i">BO3</div>
+                    <div class="card-logo1" style="background-image: url('Assets/LOGO_RRQ_orange_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-logo2" style="background-image: url('Assets/CREUX_logo_all white_png_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-title">Pro Gaming Series II</div>
+                    <div class="card-vs">VS</div>
+                    <div class="card-numb1">1</div>
+                    <div class="card-numb2">2</div>
+                </div>
+                <div class="recent-card">
+                    <div class="card-ovl"></div>
+                    <div class="card-line-top"></div>
+                    <div class="card-line-ctr1"></div>
+                    <div class="card-line-ctr2"></div>
+                    <div class="card-line-btm1"></div>
+                    <div class="card-line-btm2"></div>
+                    <div class="card-date">XX February 2023</div>
+                    <div class="card-i">BO3</div>
+                    <div class="card-logo1" style="background-image: url('Assets/LOGO_RRQ_orange_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-logo2" style="background-image: url('Assets/CREUX_logo_all white_png_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-title">Pro Gaming Series II</div>
+                    <div class="card-vs">VS</div>
+                    <div class="card-numb1">1</div>
+                    <div class="card-numb2">2</div>
+                </div>
+                <div class="recent-card">
+                    <div class="card-ovl"></div>
+                    <div class="card-line-top"></div>
+                    <div class="card-line-ctr1"></div>
+                    <div class="card-line-ctr2"></div>
+                    <div class="card-line-btm1"></div>
+                    <div class="card-line-btm2"></div>
+                    <div class="card-date">XX February 2023</div>
+                    <div class="card-i">BO3</div>
+                    <div class="card-logo1" style="background-image: url('Assets/LOGO_RRQ_orange_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-logo2" style="background-image: url('Assets/CREUX_logo_all white_png_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-title">Pro Gaming Series II</div>
+                    <div class="card-vs">VS</div>
+                    <div class="card-numb1">1</div>
+                    <div class="card-numb2">2</div>
+                </div>
+            </div>
+            <div class="recent-cont" id="matches-WR">
+                <div class="recent-card">
+                    <div class="card-ovl"></div>
+                    <div class="card-line-top"></div>
+                    <div class="card-line-ctr1"></div>
+                    <div class="card-line-ctr2"></div>
+                    <div class="card-line-btm1"></div>
+                    <div class="card-line-btm2"></div>
+                    <div class="card-date">XX February 2023</div>
+                    <div class="card-i">BO3</div>
+                    <div class="card-logo1" style="background-image: url('Assets/LOGO_RRQ_orange_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-logo2" style="background-image: url('Assets/CREUX_logo_all white_png_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-title">Pro Gaming Series II</div>
+                    <div class="card-vs">VS</div>
+                    <div class="card-numb1">1</div>
+                    <div class="card-numb2">2</div>
+                </div>
+                <div class="recent-card">
+                    <div class="card-ovl"></div>
+                    <div class="card-line-top"></div>
+                    <div class="card-line-ctr1"></div>
+                    <div class="card-line-ctr2"></div>
+                    <div class="card-line-btm1"></div>
+                    <div class="card-line-btm2"></div>
+                    <div class="card-date">XX February 2023</div>
+                    <div class="card-i">BO3</div>
+                    <div class="card-logo1" style="background-image: url('Assets/LOGO_RRQ_orange_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-logo2" style="background-image: url('Assets/CREUX_logo_all white_png_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-title">Pro Gaming Series II</div>
+                    <div class="card-vs">VS</div>
+                    <div class="card-numb1">1</div>
+                    <div class="card-numb2">2</div>
+                </div>
+                <div class="recent-card">
+                    <div class="card-ovl"></div>
+                    <div class="card-line-top"></div>
+                    <div class="card-line-ctr1"></div>
+                    <div class="card-line-ctr2"></div>
+                    <div class="card-line-btm1"></div>
+                    <div class="card-line-btm2"></div>
+                    <div class="card-date">XX February 2023</div>
+                    <div class="card-i">BO3</div>
+                    <div class="card-logo1" style="background-image: url('Assets/LOGO_RRQ_orange_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-logo2" style="background-image: url('Assets/CREUX_logo_all white_png_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-title">Pro Gaming Series II</div>
+                    <div class="card-vs">VS</div>
+                    <div class="card-numb1">1</div>
+                    <div class="card-numb2">2</div>
+                </div>
+                <div class="recent-card">
+                    <div class="card-ovl"></div>
+                    <div class="card-line-top"></div>
+                    <div class="card-line-ctr1"></div>
+                    <div class="card-line-ctr2"></div>
+                    <div class="card-line-btm1"></div>
+                    <div class="card-line-btm2"></div>
+                    <div class="card-date">XX February 2023</div>
+                    <div class="card-i">BO3</div>
+                    <div class="card-logo1" style="background-image: url('Assets/LOGO_RRQ_orange_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-logo2" style="background-image: url('Assets/CREUX_logo_all white_png_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-title">Pro Gaming Series II</div>
+                    <div class="card-vs">VS</div>
+                    <div class="card-numb1">1</div>
+                    <div class="card-numb2">2</div>
+                </div>
+            </div>
+            <div class="recent-cont" id="matches-FF">
+                <div class="recent-card">
+                    <div class="card-ovl"></div>
+                    <div class="card-line-top"></div>
+                    <div class="card-line-ctr1"></div>
+                    <div class="card-line-ctr2"></div>
+                    <div class="card-line-btm1"></div>
+                    <div class="card-line-btm2"></div>
+                    <div class="card-date">XX February 2023</div>
+                    <div class="card-i">BO3</div>
+                    <div class="card-logo1" style="background-image: url('Assets/LOGO_RRQ_orange_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-logo2" style="background-image: url('Assets/CREUX_logo_all white_png_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-title">Pro Gaming Series II</div>
+                    <div class="card-vs">VS</div>
+                    <div class="card-numb1">1</div>
+                    <div class="card-numb2">2</div>
+                </div>
+                <div class="recent-card">
+                    <div class="card-ovl"></div>
+                    <div class="card-line-top"></div>
+                    <div class="card-line-ctr1"></div>
+                    <div class="card-line-ctr2"></div>
+                    <div class="card-line-btm1"></div>
+                    <div class="card-line-btm2"></div>
+                    <div class="card-date">XX February 2023</div>
+                    <div class="card-i">BO3</div>
+                    <div class="card-logo1" style="background-image: url('Assets/LOGO_RRQ_orange_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-logo2" style="background-image: url('Assets/CREUX_logo_all white_png_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-title">Pro Gaming Series II</div>
+                    <div class="card-vs">VS</div>
+                    <div class="card-numb1">1</div>
+                    <div class="card-numb2">2</div>
+                </div>
+                <div class="recent-card">
+                    <div class="card-ovl"></div>
+                    <div class="card-line-top"></div>
+                    <div class="card-line-ctr1"></div>
+                    <div class="card-line-ctr2"></div>
+                    <div class="card-line-btm1"></div>
+                    <div class="card-line-btm2"></div>
+                    <div class="card-date">XX February 2023</div>
+                    <div class="card-i">BO3</div>
+                    <div class="card-logo1" style="background-image: url('Assets/LOGO_RRQ_orange_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-logo2" style="background-image: url('Assets/CREUX_logo_all white_png_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-title">Pro Gaming Series II</div>
+                    <div class="card-vs">VS</div>
+                    <div class="card-numb1">1</div>
+                    <div class="card-numb2">2</div>
+                </div>
+                <div class="recent-card">
+                    <div class="card-ovl"></div>
+                    <div class="card-line-top"></div>
+                    <div class="card-line-ctr1"></div>
+                    <div class="card-line-ctr2"></div>
+                    <div class="card-line-btm1"></div>
+                    <div class="card-line-btm2"></div>
+                    <div class="card-date">XX February 2023</div>
+                    <div class="card-i">BO3</div>
+                    <div class="card-logo1" style="background-image: url('Assets/LOGO_RRQ_orange_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-logo2" style="background-image: url('Assets/CREUX_logo_all white_png_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-title">Pro Gaming Series II</div>
+                    <div class="card-vs">VS</div>
+                    <div class="card-numb1">1</div>
+                    <div class="card-numb2">2</div>
+                </div>
+            </div>
+            <div class="recent-cont" id="matches-V">
+                <div class="recent-card">
+                    <div class="card-ovl"></div>
+                    <div class="card-line-top"></div>
+                    <div class="card-line-ctr1"></div>
+                    <div class="card-line-ctr2"></div>
+                    <div class="card-line-btm1"></div>
+                    <div class="card-line-btm2"></div>
+                    <div class="card-date">XX February 2023</div>
+                    <div class="card-i">BO3</div>
+                    <div class="card-logo1" style="background-image: url('Assets/LOGO_RRQ_orange_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-logo2" style="background-image: url('Assets/CREUX_logo_all white_png_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-title">Pro Gaming Series II</div>
+                    <div class="card-vs">VS</div>
+                    <div class="card-numb1">1</div>
+                    <div class="card-numb2">2</div>
+                </div>
+                <div class="recent-card">
+                    <div class="card-ovl"></div>
+                    <div class="card-line-top"></div>
+                    <div class="card-line-ctr1"></div>
+                    <div class="card-line-ctr2"></div>
+                    <div class="card-line-btm1"></div>
+                    <div class="card-line-btm2"></div>
+                    <div class="card-date">XX February 2023</div>
+                    <div class="card-i">BO3</div>
+                    <div class="card-logo1" style="background-image: url('Assets/LOGO_RRQ_orange_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-logo2" style="background-image: url('Assets/CREUX_logo_all white_png_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-title">Pro Gaming Series II</div>
+                    <div class="card-vs">VS</div>
+                    <div class="card-numb1">1</div>
+                    <div class="card-numb2">2</div>
+                </div>
+                <div class="recent-card">
+                    <div class="card-ovl"></div>
+                    <div class="card-line-top"></div>
+                    <div class="card-line-ctr1"></div>
+                    <div class="card-line-ctr2"></div>
+                    <div class="card-line-btm1"></div>
+                    <div class="card-line-btm2"></div>
+                    <div class="card-date">XX February 2023</div>
+                    <div class="card-i">BO3</div>
+                    <div class="card-logo1" style="background-image: url('Assets/LOGO_RRQ_orange_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-logo2" style="background-image: url('Assets/CREUX_logo_all white_png_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-title">Pro Gaming Series II</div>
+                    <div class="card-vs">VS</div>
+                    <div class="card-numb1">1</div>
+                    <div class="card-numb2">2</div>
+                </div>
+                <div class="recent-card">
+                    <div class="card-ovl"></div>
+                    <div class="card-line-top"></div>
+                    <div class="card-line-ctr1"></div>
+                    <div class="card-line-ctr2"></div>
+                    <div class="card-line-btm1"></div>
+                    <div class="card-line-btm2"></div>
+                    <div class="card-date">XX February 2023</div>
+                    <div class="card-i">BO3</div>
+                    <div class="card-logo1" style="background-image: url('Assets/LOGO_RRQ_orange_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-logo2" style="background-image: url('Assets/CREUX_logo_all white_png_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-title">Pro Gaming Series II</div>
+                    <div class="card-vs">VS</div>
+                    <div class="card-numb1">1</div>
+                    <div class="card-numb2">2</div>
+                </div>
+            </div>
+            
+            <div class="mbg-overlay-btm"></div>
+        </section>
+        
+        <!-- footer -->
+        <div class="footer">
+            <div class="ftr-logo" style="background-image: url('Assets/CREUX_logo_all white_png.png'); background-size: cover;
+            background-repeat: no-repeat;"></div>
+            <div class="ftr-copyright">©creuxteam</div>
+            <div class="socmed-cont">
+                <div class="socmed-icon" style="background-image: url('Assets/tiktok.svg'); background-size: cover;
+                background-repeat: no-repeat;"></div>
+                <div class="socmed-icon" style="background-image: url('Assets/yutub.svg'); background-size: cover;
+                background-repeat: no-repeat;"></div>
+                <div class="socmed-icon" style="background-image: url('Assets/twitter.svg'); background-size: cover;
+                background-repeat: no-repeat;"></div>
+                <div class="socmed-icon" style="background-image: url('Assets/fb.svg'); background-size: cover;
+                background-repeat: no-repeat;"></div>
+                <div class="socmed-icon" style="background-image: url('Assets/ig.svg'); background-size: cover;
+                background-repeat: no-repeat;"></div>
+            </div>
+            <div class="ftr-email-txt">contact@creux.co</div>
+        </div>
+
+        <!-- horizontal scroll -->
+        <script>
+            const scrollContainer1 = document.querySelector(".partners-car");
+            const scrollContainer2 = document.querySelector(".matches-car");
+            const scrollContainer3 = document.querySelector(".teams-car");
+            const scrollContainer4 = document.querySelector(".g-teams-car-cont-ml");
+            const scrollContainer5 = document.querySelector(".g-teams-car-cont-pubgm");
+            const scrollContainer6 = document.querySelector(".g-teams-car-cont-wr");
+
+            [scrollContainer1, scrollContainer2,
+            scrollContainer3, scrollContainer4,
+            scrollContainer5, scrollContainer6,].forEach((scrollContainer)=>{
+                scrollContainer.addEventListener("wheel", (evt) => {
+                    evt.preventDefault();
+                    scrollContainer.scrollLeft += evt.deltaY;
+                });
+            });
+        </script>
+    </body>
+</html>
