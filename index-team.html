@@ -1,0 +1,1421 @@
+<html>
+    <head>
+        <link rel="shortcut icon" href="Assets/creux_favicon.png" type=“image/png”>
+        <title>CREUX</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <!--navigation-->
+        <div id="nav">
+            <div class="nav-ovl"></div>
+        </div>
+
+        <!-- pop nav -->
+        <div id="menu-ovl" class="close" style="display: none;">
+                <div class="menu-cont">
+                    <div class="menu-cont-v2 active" onclick="location.href='?page=teams'">
+                        <div class="menu-numb">01</div>
+                        <div class="menu-txt">TEAMS</div>
+                    </div>
+                    <div class="menu-cont-v2" onclick="location.href='?page=matches?cathegory=1'">
+                        <div class="menu-numb">02</div>
+                        <div class="menu-txt">MATCHES</div>
+                    </div>
+                    <div class="menu-cont-v2" onclick="location.href='?page=news'">
+                        <div class="menu-numb">03</div>
+                        <div class="menu-txt">NEWS</div>
+                    </div>
+                    <div class="menu-cont-v2" onclick="location.href='?page=partners'">
+                        <div class="menu-numb">04</div>
+                        <div class="menu-txt">PARTNERS</div>
+                    </div>
+                    <div class="menu-cont-v2" onclick="location.href='?page=contact'">
+                        <div class="menu-numb">05</div>
+                        <div class="menu-txt">CONTACT</div>
+                    </div>
+                </div>
+        </div>
+
+        <!-- original nav -->
+        <div class="nav-line"></div>
+        <div class="nav-logo-sq">
+            <div class="logo" onclick="location.href='?page=teams'" style="background-image: url('Assets/CREUX_logo_full color_SVG.svg'); background-size: cover;
+            background-repeat: no-repeat;"></div>
+        </div>
+        <!-- input (later)
+        <div class="input-cont">
+                <select id="country" name="country" placeholder="Country"; class="dropdown">
+                        <option value="Afganistan">English</option>
+                        <option value="Albania">Indonesia</option>
+                    </select>
+
+                    </form>
+                    <hr class="hr-email"></hr>
+                    <hr class="hr-drpdown"></hr>
+        </div>
+        -->
+        <div class="lang-cont">
+            <div class="lang-txt">ENGLISH</div>
+            <div class="dr-icon" style="background-image: url('Assets/dropdown.svg'); background-size: cover;
+            background-repeat: no-repeat;"></div>
+        </div>
+        <div id="on-off" class="menu-icon" style="background-image: url('Assets/burger-menu.svg'); background-size: cover;
+        background-repeat: no-repeat;" onclick="myFunction()"></div>
+        <!--script open-close menu overlay-->
+        <script>
+            function myFunction() {
+                var x = document.getElementById("menu-ovl");
+                var y = document.getElementById("on-off");
+                if (x.style.display === "none") {
+                  x.style.display = "block";
+                  x.style.animation="move 1s 1";
+                  y.style.backgroundImage="url(Assets/x-icon.svg)";
+                  y.style.animation="fadeIn 2s";
+                } else {
+                  x.style.animation="move2 1s 1";
+                  setTimeout(function() {
+                        x.style.display = "none";
+                    }, 1000);
+                  y.style.backgroundImage="url(Assets/burger-menu.svg)";
+                  y.style.animation="fadeIn2 2s";
+                }
+            }
+        </script>
+        
+
+        <!--menu overlay (no use)-->
+        <!-- <div id="menu-ovl" class="close">
+            <div class="nav-line"></div>
+            <div class="nav-logo-sq">
+                <div class="logo" style="background-image: url('Assets/CREUX_logo_full color_SVG.svg'); background-size: cover;
+                background-repeat: no-repeat;"></div>
+            </div>
+            <div class="lang-cont">
+                <div class="lang-txt">ENGLISH</div>
+                <div class="dr-icon" style="background-image: url('Assets/dropdown.svg'); background-size: cover;
+                background-repeat: no-repeat;"></div>
+            </div>
+            <div class="menu-icon" style="background-image: url('Assets/x-icon.svg'); background-size: cover;
+            background-repeat: no-repeat;" onclick="myFunction2()"></div>
+            <div class="menu-cont">
+                <div class="menu-cont-v2">
+                    <div class="menu-numb">01</div>
+                    <div class="menu-txt">TEAMS</div>
+                </div>
+                <div class="menu-cont-v2">
+                    <div class="menu-numb">02</div>
+                    <div class="menu-txt">MATCHES</div>
+                </div>
+                <div class="menu-cont-v2">
+                    <div class="menu-numb">03</div>
+                    <div class="menu-txt">NEWS</div>
+                </div>
+                <div class="menu-cont-v2">
+                    <div class="menu-numb">04</div>
+                    <div class="menu-txt">PARTNERS</div>
+                </div>
+                <div class="menu-cont-v2">
+                    <div class="menu-numb">05</div>
+                    <div class="menu-txt">CONTACT</div>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- team page -->
+        <section id="teampage">
+            <div id="main-car"  data-ride="carousel">
+                <!--indicator-->
+                <ol class="carousel-indicators">
+                  <li data-target="#main-car" data-slide-to="0" class="active"></li>
+                  <li data-target="#main-car" data-slide-to="1"></li>
+                  <li data-target="#main-car" data-slide-to="2"></li>
+                  <li data-target="#main-car" data-slide-to="3"></li>
+                </ol>
+                <div class="main-car-inner" role="listbox">
+                    <div class="item active" style="background-image: url('Assets/team_carousel.jpg'); background-size: cover;
+                        background-repeat: no-repeat;">
+                        <div class="car-item-title">LOREM IPSUM</div>
+                        <div class="car-item-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris finibus ipsum ut sapien aliquet.</div>
+                        <div class="ovl-car"></div>
+                    </div>
+                    <div class="item" style="background-image: url('Assets/team_carousel2.jpg'); background-size: cover;
+                        background-repeat: no-repeat;">
+                        <div class="car-item-title">LOREM IPSUM</div>
+                        <div class="car-item-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris finibus ipsum ut sapien aliquet.</div>
+                        <div class="ovl-car"></div>
+                    </div>
+                </div>
+                <!-- Left and right controls -->
+                <a class="left-car-ctrl" href="#main-car" role="button" data-slide="prev">
+                        <div class="left-icon" style="background-image: url('Assets/left-icon.svg'); background-size: cover;
+                        background-repeat: no-repeat;"></div>
+                </a>
+                <a class="right-car-ctrl" href="#main-car" role="button" data-slide="next">
+                        <div class="right-icon" style="background-image: url('Assets/right-icon.svg'); background-size: cover;
+                        background-repeat: no-repeat;"></div>
+                </a>
+                <div class="scrll-icon" style="background-image: url('Assets/scroll-icon.svg'); background-size: cover;
+                background-repeat: no-repeat;"></div>
+            </div>
+            <div class="bg"> 
+                <div class="bg-overlay-top"></div>
+                <div class="bg-ornament" style="background-image: url('Assets/ornament_single color_cropped.svg'); background-size: cover;
+                background-repeat: no-repeat;"></div>
+            </div>
+            <div class="partners-title">PARTNERS</div>
+            <div class="partners-line-left"></div>
+            <div class="partners-car" id="scroll-h">
+                <div class="pcar-indicator"></div> 
+                <div class="pcar-inner">
+                    <div class="pcar-item" style="background-image: url('Assets/logo-disp-1.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="pcar-item" style="background-image: url('Assets/logo-disp-2.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="pcar-item" style="background-image: url('Assets/logo-disp-3.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="pcar-item" style="background-image: url('Assets/logo-disp-4.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="pcar-item" style="background-image: url('Assets/logo-disp-5.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="pcar-item" style="background-image: url('Assets/logo-disp-6.svg'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="pcar-item" style="background-image: url('Assets/logo-disp-1.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="pcar-item" style="background-image: url('Assets/logo-disp-2.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="pcar-item" style="background-image: url('Assets/logo-disp-3.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="pcar-item" style="background-image: url('Assets/logo-disp-4.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                </div>
+
+                <div class="pcar-left-cntrl"></div>
+                <div class="pcar-right-cntrl"></div>
+            </div>
+            <div class="partners-line-right"></div>
+            <div class="partners-btn" onclick="location.href='?page=partners'">
+                <div class="partners-btn-txt">SEE MORE</div>
+            </div>
+            
+            <div class="matches-title">Matches</div>
+            <div class="matches-car" id="scroll-h">
+                <div class="mcar-indicator"></div>
+                <div class="mcar-inner">
+                    <div class="mcar-item">
+                        <div class="mcar-item-line"></div>
+                        <div class="mcar-item-logo" style="background-image: url('Assets/esl-logo-vector.svg'); background-size: cover;
+                        background-repeat: no-repeat;"></div>
+                        <div class="mcar-item-title">
+                            <h2>Lorem Ipsum Dolor sit Amet1</h2>
+                        </div>
+                        <div class="mcar-item-date">
+                            <h3>XX February 2024</h3>
+                        </div>
+                    </div>
+                    <div class="mcar-item">
+                        <div class="mcar-item-line"></div>
+                        <div class="mcar-item-logo" style="background-image: url('Assets/esl-logo-vector.svg'); background-size: cover;
+                        background-repeat: no-repeat;"></div>
+                        <div class="mcar-item-title">
+                            <h2>Lorem Ipsum Dolor sit Amet2</h2>
+                        </div>
+                        <div class="mcar-item-date">
+                            <h3>XX February 2024</h3>
+                        </div>
+                    </div>
+                    <div class="mcar-item">
+                        <div class="mcar-item-line"></div>
+                        <div class="mcar-item-logo" style="background-image: url('Assets/esl-logo-vector.svg'); background-size: cover;
+                        background-repeat: no-repeat;"></div>
+                        <div class="mcar-item-title">
+                            <h2>Lorem Ipsum Dolor sit Amet3</h2>
+                        </div>
+                        <div class="mcar-item-date">
+                            <h3>XX February 2024</h3>
+                        </div>
+                    </div>
+                    <div class="mcar-item">
+                        <div class="mcar-item-line"></div>
+                        <div class="mcar-item-logo" style="background-image: url('Assets/esl-logo-vector.svg'); background-size: cover;
+                        background-repeat: no-repeat;"></div>
+                        <div class="mcar-item-title">
+                            <h2>Lorem Ipsum Dolor sit Amet4</h2>
+                        </div>
+                        <div class="mcar-item-date">
+                            <h3>XX February 2024</h3>
+                        </div>
+                    </div>
+                    <div class="mcar-item">
+                        <div class="mcar-item-line"></div>
+                        <div class="mcar-item-logo" style="background-image: url('Assets/esl-logo-vector.svg'); background-size: cover;
+                        background-repeat: no-repeat;"></div>
+                        <div class="mcar-item-title">
+                            <h2>Lorem Ipsum Dolor sit Amet5</h2>
+                        </div>
+                        <div class="mcar-item-date">
+                            <h3>XX February 2024</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mcar-left-cntrl"></div>
+                <div class="mcar-right-cntrl"></div>
+            </div>
+            <div class="matches-btn" onclick="location.href='?page=matches?cathegory=1'">
+                <div class="matches-btn-txt">SEE MORE</div>
+            </div>
+
+            <div class="teams-title">Teams</div>
+            <div class="teams-car" id="scroll-h">
+                <div class="tcar-indicator"></div>
+                <div class="tcar-inner">
+                    <div class="tcar-item" style="background-image: url('Assets/card team.png'); background-size: cover;
+                        background-repeat: no-repeat;">
+                        <div class="tcar-item-logo" style="background-image: url('Assets/logo ml.png'); background-size: cover;
+                        background-repeat: no-repeat;"></div>
+                        <div class="tcar-item-title">
+                            <h4>Mobile Legend Team1</h4>
+                        </div>
+                    </div>
+                    <div class="tcar-item" style="background-image: url('Assets/card team.png'); background-size: cover;
+                        background-repeat: no-repeat;">
+                        <div class="tcar-item-logo" style="background-image: url('Assets/logo ml.png'); background-size: cover;
+                        background-repeat: no-repeat;"></div>
+                        <div class="tcar-item-title">
+                            <h4>Mobile Legend Team2</h4>
+                        </div>
+                    </div>
+                    <div class="tcar-item" style="background-image: url('Assets/card team.png'); background-size: cover;
+                        background-repeat: no-repeat;">
+                        <div class="tcar-item-logo" style="background-image: url('Assets/logo ml.png'); background-size: cover;
+                        background-repeat: no-repeat;"></div>
+                        <div class="tcar-item-title">
+                            <h4>Mobile Legend Team3</h4>
+                        </div>
+                    </div>
+                    <div class="tcar-item" style="background-image: url('Assets/card team.png'); background-size: cover;
+                        background-repeat: no-repeat;">
+                        <div class="tcar-item-logo" style="background-image: url('Assets/logo ml.png'); background-size: cover;
+                        background-repeat: no-repeat;"></div>
+                        <div class="tcar-item-title">
+                            <h4>Mobile Legend Team4</h4>
+                        </div>
+                    </div>
+                    <div class="tcar-item" style="background-image: url('Assets/card team.png'); background-size: cover;
+                        background-repeat: no-repeat;">
+                        <div class="tcar-item-logo" style="background-image: url('Assets/logo ml.png'); background-size: cover;
+                        background-repeat: no-repeat;"></div>
+                        <div class="tcar-item-title">
+                            <h4>Mobile Legend Team5</h4>
+                        </div>
+                    </div>
+                    <div class="tcar-item" style="background-image: url('Assets/card team.png'); background-size: cover;
+                        background-repeat: no-repeat;">
+                        <div class="tcar-item-logo" style="background-image: url('Assets/logo ml.png'); background-size: cover;
+                        background-repeat: no-repeat;"></div>
+                        <div class="tcar-item-title">
+                            <h4>Mobile Legend Team6</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tcar-left-cntrl"></div>
+                <div class="tcar-right-cntrl"></div>
+            </div>
+            <div class="teams-btn">
+                <div class="teams-btn-txt" onclick="location.href='?page=team-e'">SEE MORE</div>
+            </div>
+            <div class="stt-img" style="background-image: url('Assets/team full.png'); background-size: cover;
+            background-repeat: no-repeat;"></div>
+            <div class="stt-title">Lorem Ipsum</div>
+            <div class="stt-txt">
+                <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Aenean hendrerit eros eget diam commodo hendrerit. Proin
+                    congue lacinia iaculis. Praesent non sapien vel neque volutpat
+                    finibus et sit amet ex. Fusce arcu enim, pharetra non dapibus
+                    a, egestas vel nulla.</h1>
+            </div>
+            <div class="bg-overlay-btm"></div>
+        </section>
+
+        <!-- extended team -->
+        <section id="teams">
+            <div class="teams-bg"  style="background-image: url('Assets/ornament_single color_cropped.svg'); background-size: cover;
+            background-repeat: no-repeat;"></div>
+            <div class="teams-cont">
+                <div class="game-teams-cont">
+                    <div class="g-teams-logo">
+                        <img src="Assets/logo ml.png" alt="">
+                    </div>
+                    <div class="g-teams-ttl">Mobile Legends Team</div>
+                    <div class="g-teams-line"></div>
+                    <div class="g-teams-car-cont-ml">
+                        <div class="g-teams-inner-cont">
+                            <div class="g-teams-card">
+                                <div class="g-teams-img">
+                                    <img src="Assets/team-photo.png" height="100%">
+                                </div>
+                                <div class="g-teams-ovl"></div>
+                                <div class="g-teams-name">John Doe</div>
+                                <div class="g-teams-nick">A.K.A Jonathan Doe</div>
+                                <div class="g-teams-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nunc ligula, finibus eu est id.</div>
+                                <div class="g-t-role-cont">
+                                    <div class="g-t-role-ttl">ROLE</div>
+                                    <div class="g-t-role-txt">MID/CORE</div>
+                                </div>
+                                <div class="g-t-flag-cont">
+                                    <div class="g-t-flag-ttl">NATIONALITY</div>
+                                    <div class="g-t-flag-img">
+                                        <img src="Assets/indo-flag.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="g-teams-accent"></div>
+                            </div>
+                            <div class="g-teams-card">
+                                <div class="g-teams-img">
+                                    <img src="Assets/team-photo.png" height="100%">
+                                </div>
+                                <div class="g-teams-ovl"></div>
+                                <div class="g-teams-name">John Doe</div>
+                                <div class="g-teams-nick">A.K.A Jonathan Doe</div>
+                                <div class="g-teams-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nunc ligula, finibus eu est id.</div>
+                                <div class="g-t-role-cont">
+                                    <div class="g-t-role-ttl">ROLE</div>
+                                    <div class="g-t-role-txt">MID/CORE</div>
+                                </div>
+                                <div class="g-t-flag-cont">
+                                    <div class="g-t-flag-ttl">NATIONALITY</div>
+                                    <div class="g-t-flag-img">
+                                        <img src="Assets/indo-flag.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="g-teams-accent"></div>
+                            </div>
+                            <div class="g-teams-card">
+                                <div class="g-teams-img">
+                                    <img src="Assets/team-photo.png" height="100%">
+                                </div>
+                                <div class="g-teams-ovl"></div>
+                                <div class="g-teams-name">John Doe</div>
+                                <div class="g-teams-nick">A.K.A Jonathan Doe</div>
+                                <div class="g-teams-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nunc ligula, finibus eu est id.</div>
+                                <div class="g-t-role-cont">
+                                    <div class="g-t-role-ttl">ROLE</div>
+                                    <div class="g-t-role-txt">MID/CORE</div>
+                                </div>
+                                <div class="g-t-flag-cont">
+                                    <div class="g-t-flag-ttl">NATIONALITY</div>
+                                    <div class="g-t-flag-img">
+                                        <img src="Assets/indo-flag.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="g-teams-accent"></div>
+                            </div>
+                            <div class="g-teams-card">
+                                <div class="g-teams-img">
+                                    <img src="Assets/team-photo.png" height="100%">
+                                </div>
+                                <div class="g-teams-ovl"></div>
+                                <div class="g-teams-name">John Doe</div>
+                                <div class="g-teams-nick">A.K.A Jonathan Doe</div>
+                                <div class="g-teams-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nunc ligula, finibus eu est id.</div>
+                                <div class="g-t-role-cont">
+                                    <div class="g-t-role-ttl">ROLE</div>
+                                    <div class="g-t-role-txt">MID/CORE</div>
+                                </div>
+                                <div class="g-t-flag-cont">
+                                    <div class="g-t-flag-ttl">NATIONALITY</div>
+                                    <div class="g-t-flag-img">
+                                        <img src="Assets/indo-flag.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="g-teams-accent"></div>
+                            </div>
+                            <div class="g-teams-card">
+                                <div class="g-teams-img">
+                                    <img src="Assets/team-photo.png" height="100%">
+                                </div>
+                                <div class="g-teams-ovl"></div>
+                                <div class="g-teams-name">John Doe</div>
+                                <div class="g-teams-nick">A.K.A Jonathan Doe</div>
+                                <div class="g-teams-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nunc ligula, finibus eu est id.</div>
+                                <div class="g-t-role-cont">
+                                    <div class="g-t-role-ttl">ROLE</div>
+                                    <div class="g-t-role-txt">MID/CORE</div>
+                                </div>
+                                <div class="g-t-flag-cont">
+                                    <div class="g-t-flag-ttl">NATIONALITY</div>
+                                    <div class="g-t-flag-img">
+                                        <img src="Assets/indo-flag.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="g-teams-accent"></div>
+                            </div>
+                            <div class="g-teams-card">
+                                <div class="g-teams-img">
+                                    <img src="Assets/team-photo.png" height="100%">
+                                </div>
+                                <div class="g-teams-ovl"></div>
+                                <div class="g-teams-name">John Doe</div>
+                                <div class="g-teams-nick">A.K.A Jonathan Doe</div>
+                                <div class="g-teams-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nunc ligula, finibus eu est id.</div>
+                                <div class="g-t-role-cont">
+                                    <div class="g-t-role-ttl">ROLE</div>
+                                    <div class="g-t-role-txt">MID/CORE</div>
+                                </div>
+                                <div class="g-t-flag-cont">
+                                    <div class="g-t-flag-ttl">NATIONALITY</div>
+                                    <div class="g-t-flag-img">
+                                        <img src="Assets/indo-flag.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="g-teams-accent"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="game-teams-cont">
+                    <div class="g-teams-logo">
+                        <img src="Assets/logo ml.png" alt="">
+                    </div>
+                    <div class="g-teams-ttl">Mobile Legends Team</div>
+                    <div class="g-teams-line"></div>
+                    <div class="g-teams-car-cont-pubgm">
+                        <div class="g-teams-inner-cont">
+                            <div class="g-teams-card">
+                                <div class="g-teams-img">
+                                    <img src="Assets/team-photo.png" height="100%">
+                                </div>
+                                <div class="g-teams-ovl"></div>
+                                <div class="g-teams-name">John Doe</div>
+                                <div class="g-teams-nick">A.K.A Jonathan Doe</div>
+                                <div class="g-teams-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nunc ligula, finibus eu est id.</div>
+                                <div class="g-t-role-cont">
+                                    <div class="g-t-role-ttl">ROLE</div>
+                                    <div class="g-t-role-txt">MID/CORE</div>
+                                </div>
+                                <div class="g-t-flag-cont">
+                                    <div class="g-t-flag-ttl">NATIONALITY</div>
+                                    <div class="g-t-flag-img">
+                                        <img src="Assets/indo-flag.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="g-teams-accent"></div>
+                            </div>
+                            <div class="g-teams-card">
+                                <div class="g-teams-img">
+                                    <img src="Assets/team-photo.png" height="100%">
+                                </div>
+                                <div class="g-teams-ovl"></div>
+                                <div class="g-teams-name">John Doe</div>
+                                <div class="g-teams-nick">A.K.A Jonathan Doe</div>
+                                <div class="g-teams-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nunc ligula, finibus eu est id.</div>
+                                <div class="g-t-role-cont">
+                                    <div class="g-t-role-ttl">ROLE</div>
+                                    <div class="g-t-role-txt">MID/CORE</div>
+                                </div>
+                                <div class="g-t-flag-cont">
+                                    <div class="g-t-flag-ttl">NATIONALITY</div>
+                                    <div class="g-t-flag-img">
+                                        <img src="Assets/indo-flag.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="g-teams-accent"></div>
+                            </div>
+                            <div class="g-teams-card">
+                                <div class="g-teams-img">
+                                    <img src="Assets/team-photo.png" height="100%">
+                                </div>
+                                <div class="g-teams-ovl"></div>
+                                <div class="g-teams-name">John Doe</div>
+                                <div class="g-teams-nick">A.K.A Jonathan Doe</div>
+                                <div class="g-teams-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nunc ligula, finibus eu est id.</div>
+                                <div class="g-t-role-cont">
+                                    <div class="g-t-role-ttl">ROLE</div>
+                                    <div class="g-t-role-txt">MID/CORE</div>
+                                </div>
+                                <div class="g-t-flag-cont">
+                                    <div class="g-t-flag-ttl">NATIONALITY</div>
+                                    <div class="g-t-flag-img">
+                                        <img src="Assets/indo-flag.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="g-teams-accent"></div>
+                            </div>
+                            <div class="g-teams-card">
+                                <div class="g-teams-img">
+                                    <img src="Assets/team-photo.png" height="100%">
+                                </div>
+                                <div class="g-teams-ovl"></div>
+                                <div class="g-teams-name">John Doe</div>
+                                <div class="g-teams-nick">A.K.A Jonathan Doe</div>
+                                <div class="g-teams-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nunc ligula, finibus eu est id.</div>
+                                <div class="g-t-role-cont">
+                                    <div class="g-t-role-ttl">ROLE</div>
+                                    <div class="g-t-role-txt">MID/CORE</div>
+                                </div>
+                                <div class="g-t-flag-cont">
+                                    <div class="g-t-flag-ttl">NATIONALITY</div>
+                                    <div class="g-t-flag-img">
+                                        <img src="Assets/indo-flag.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="g-teams-accent"></div>
+                            </div>
+                            <div class="g-teams-card">
+                                <div class="g-teams-img">
+                                    <img src="Assets/team-photo.png" height="100%">
+                                </div>
+                                <div class="g-teams-ovl"></div>
+                                <div class="g-teams-name">John Doe</div>
+                                <div class="g-teams-nick">A.K.A Jonathan Doe</div>
+                                <div class="g-teams-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nunc ligula, finibus eu est id.</div>
+                                <div class="g-t-role-cont">
+                                    <div class="g-t-role-ttl">ROLE</div>
+                                    <div class="g-t-role-txt">MID/CORE</div>
+                                </div>
+                                <div class="g-t-flag-cont">
+                                    <div class="g-t-flag-ttl">NATIONALITY</div>
+                                    <div class="g-t-flag-img">
+                                        <img src="Assets/indo-flag.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="g-teams-accent"></div>
+                            </div>
+                            <div class="g-teams-card">
+                                <div class="g-teams-img">
+                                    <img src="Assets/team-photo.png" height="100%">
+                                </div>
+                                <div class="g-teams-ovl"></div>
+                                <div class="g-teams-name">John Doe</div>
+                                <div class="g-teams-nick">A.K.A Jonathan Doe</div>
+                                <div class="g-teams-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nunc ligula, finibus eu est id.</div>
+                                <div class="g-t-role-cont">
+                                    <div class="g-t-role-ttl">ROLE</div>
+                                    <div class="g-t-role-txt">MID/CORE</div>
+                                </div>
+                                <div class="g-t-flag-cont">
+                                    <div class="g-t-flag-ttl">NATIONALITY</div>
+                                    <div class="g-t-flag-img">
+                                        <img src="Assets/indo-flag.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="g-teams-accent"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="game-teams-cont">
+                    <div class="g-teams-logo">
+                        <img src="Assets/logo ml.png" alt="">
+                    </div>
+                    <div class="g-teams-ttl">Mobile Legends Team</div>
+                    <div class="g-teams-line"></div>
+                    <div class="g-teams-car-cont-wr">
+                        <div class="g-teams-inner-cont">
+                            <div class="g-teams-card">
+                                <div class="g-teams-img">
+                                    <img src="Assets/team-photo.png" height="100%">
+                                </div>
+                                <div class="g-teams-ovl"></div>
+                                <div class="g-teams-name">John Doe</div>
+                                <div class="g-teams-nick">A.K.A Jonathan Doe</div>
+                                <div class="g-teams-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nunc ligula, finibus eu est id.</div>
+                                <div class="g-t-role-cont">
+                                    <div class="g-t-role-ttl">ROLE</div>
+                                    <div class="g-t-role-txt">MID/CORE</div>
+                                </div>
+                                <div class="g-t-flag-cont">
+                                    <div class="g-t-flag-ttl">NATIONALITY</div>
+                                    <div class="g-t-flag-img">
+                                        <img src="Assets/indo-flag.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="g-teams-accent"></div>
+                            </div>
+                            <div class="g-teams-card">
+                                <div class="g-teams-img">
+                                    <img src="Assets/team-photo.png" height="100%">
+                                </div>
+                                <div class="g-teams-ovl"></div>
+                                <div class="g-teams-name">John Doe</div>
+                                <div class="g-teams-nick">A.K.A Jonathan Doe</div>
+                                <div class="g-teams-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nunc ligula, finibus eu est id.</div>
+                                <div class="g-t-role-cont">
+                                    <div class="g-t-role-ttl">ROLE</div>
+                                    <div class="g-t-role-txt">MID/CORE</div>
+                                </div>
+                                <div class="g-t-flag-cont">
+                                    <div class="g-t-flag-ttl">NATIONALITY</div>
+                                    <div class="g-t-flag-img">
+                                        <img src="Assets/indo-flag.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="g-teams-accent"></div>
+                            </div>
+                            <div class="g-teams-card">
+                                <div class="g-teams-img">
+                                    <img src="Assets/team-photo.png" height="100%">
+                                </div>
+                                <div class="g-teams-ovl"></div>
+                                <div class="g-teams-name">John Doe</div>
+                                <div class="g-teams-nick">A.K.A Jonathan Doe</div>
+                                <div class="g-teams-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nunc ligula, finibus eu est id.</div>
+                                <div class="g-t-role-cont">
+                                    <div class="g-t-role-ttl">ROLE</div>
+                                    <div class="g-t-role-txt">MID/CORE</div>
+                                </div>
+                                <div class="g-t-flag-cont">
+                                    <div class="g-t-flag-ttl">NATIONALITY</div>
+                                    <div class="g-t-flag-img">
+                                        <img src="Assets/indo-flag.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="g-teams-accent"></div>
+                            </div>
+                            <div class="g-teams-card">
+                                <div class="g-teams-img">
+                                    <img src="Assets/team-photo.png" height="100%">
+                                </div>
+                                <div class="g-teams-ovl"></div>
+                                <div class="g-teams-name">John Doe</div>
+                                <div class="g-teams-nick">A.K.A Jonathan Doe</div>
+                                <div class="g-teams-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nunc ligula, finibus eu est id.</div>
+                                <div class="g-t-role-cont">
+                                    <div class="g-t-role-ttl">ROLE</div>
+                                    <div class="g-t-role-txt">MID/CORE</div>
+                                </div>
+                                <div class="g-t-flag-cont">
+                                    <div class="g-t-flag-ttl">NATIONALITY</div>
+                                    <div class="g-t-flag-img">
+                                        <img src="Assets/indo-flag.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="g-teams-accent"></div>
+                            </div>
+                            <div class="g-teams-card">
+                                <div class="g-teams-img">
+                                    <img src="Assets/team-photo.png" height="100%">
+                                </div>
+                                <div class="g-teams-ovl"></div>
+                                <div class="g-teams-name">John Doe</div>
+                                <div class="g-teams-nick">A.K.A Jonathan Doe</div>
+                                <div class="g-teams-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nunc ligula, finibus eu est id.</div>
+                                <div class="g-t-role-cont">
+                                    <div class="g-t-role-ttl">ROLE</div>
+                                    <div class="g-t-role-txt">MID/CORE</div>
+                                </div>
+                                <div class="g-t-flag-cont">
+                                    <div class="g-t-flag-ttl">NATIONALITY</div>
+                                    <div class="g-t-flag-img">
+                                        <img src="Assets/indo-flag.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="g-teams-accent"></div>
+                            </div>
+                            <div class="g-teams-card">
+                                <div class="g-teams-img">
+                                    <img src="Assets/team-photo.png" height="100%">
+                                </div>
+                                <div class="g-teams-ovl"></div>
+                                <div class="g-teams-name">John Doe</div>
+                                <div class="g-teams-nick">A.K.A Jonathan Doe</div>
+                                <div class="g-teams-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nunc ligula, finibus eu est id.</div>
+                                <div class="g-t-role-cont">
+                                    <div class="g-t-role-ttl">ROLE</div>
+                                    <div class="g-t-role-txt">MID/CORE</div>
+                                </div>
+                                <div class="g-t-flag-cont">
+                                    <div class="g-t-flag-ttl">NATIONALITY</div>
+                                    <div class="g-t-flag-img">
+                                        <img src="Assets/indo-flag.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="g-teams-accent"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-overlay-btm"></div>
+        </section>
+
+        <!-- matches page-->
+        <section id="matches">
+            <div class="mbg">
+                <div class="mbg-ornament" style="background-image: url('Assets/ornament_single color_cropped.svg'); background-size: cover;
+                background-repeat: no-repeat;"></div>
+            </div>
+            <div class="game-menu-cont">
+                <div class="game-txt active" onclick="location.href='?page=matches?cathegory=1'">PUBGM</div>
+                <div class="game-txt" onclick="location.href='?page=matches?cathegory=2'">Mobile Legends</div>
+                <div class="game-txt" onclick="location.href='?page=matches?cathegory=3'">Wild Rift</div>
+                <div class="game-txt" onclick="location.href='?page=matches?cathegory=4'">Free Fire</div>
+                <div class="game-txt" onclick="location.href='?page=matches?cathegory=5'">Valorant</div>
+            </div>
+
+            <!-- <script>
+            var PUBGM = document.getElementById("matches-PUBGM");
+            var ML = document.getElementById("matches-ML");
+            var WR = document.getElementById("matches-WR");
+            var FF = document.getElementById("matches-FF");
+            var V = document.getElementById("matches-V");
+            function Fpubgm() {
+                if (PUBGM.style.display === "none") {
+                    PUBGM.style.display = "block";
+                  x.style.animation="move 1s 1";
+                  y.style.backgroundImage="url(Assets/x-icon.svg)";
+                  y.style.animation="fadeIn 2s";
+                } else {
+                  x.style.animation="move2 1s 1";
+                  setTimeout(function() {
+                        x.style.display = "none";
+                    }, 1000);
+                  y.style.backgroundImage="url(Assets/burger-menu.svg)";
+                  y.style.animation="fadeIn2 2s";
+                }
+            }
+            </script> -->
+        
+            <div class="vline"></div>
+            <div class="info-cont" id="matches-PUBGM">
+                <div class="s-logo" style="background-image: url('Assets/esl-logo-vector.svg'); background-size: cover;
+                background-repeat: no-repeat;"></div>
+                <div class="l-logo" style="background-image: url('Assets/logo turney.png'); background-size: cover;
+                background-repeat: no-repeat;"></div>
+                <div class="info-title">Lorem Ipsum</div>
+                <div class="info-txt">Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit.Donec nunc ligula, finibus eu est id, ornare sollicitudin urna. Sed pulvinar
+                mattis ornare. Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit.Donec nunc ligula, finibus eu est id, ornare sollicitudin urna. Sed pulvinar
+                mattis ornare Lorem Ipsum.
+                </div>
+            </div>
+            <div class="info-cont" id="matches-ML">
+                <div class="s-logo" style="background-image: url('Assets/esl-logo-vector.svg'); background-size: cover;
+                background-repeat: no-repeat;"></div>
+                <div class="l-logo" style="background-image: url('Assets/logo turney.png'); background-size: cover;
+                background-repeat: no-repeat;"></div>
+                <div class="info-title">Lorem Ipsum</div>
+                <div class="info-txt">Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit.Donec nunc ligula, finibus eu est id, ornare sollicitudin urna. Sed pulvinar
+                mattis ornare. Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit.Donec nunc ligula, finibus eu est id, ornare sollicitudin urna. Sed pulvinar
+                mattis ornare Lorem Ipsum.
+                </div>
+            </div>
+            <div class="info-cont" id="matches-WR">
+                <div class="s-logo" style="background-image: url('Assets/esl-logo-vector.svg'); background-size: cover;
+                background-repeat: no-repeat;"></div>
+                <div class="l-logo" style="background-image: url('Assets/logo turney.png'); background-size: cover;
+                background-repeat: no-repeat;"></div>
+                <div class="info-title">Lorem Ipsum</div>
+                <div class="info-txt">Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit.Donec nunc ligula, finibus eu est id, ornare sollicitudin urna. Sed pulvinar
+                mattis ornare. Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit.Donec nunc ligula, finibus eu est id, ornare sollicitudin urna. Sed pulvinar
+                mattis ornare Lorem Ipsum.
+                </div>
+            </div>
+            <div class="info-cont" id="matches-FF">
+                <div class="s-logo" style="background-image: url('Assets/esl-logo-vector.svg'); background-size: cover;
+                background-repeat: no-repeat;"></div>
+                <div class="l-logo" style="background-image: url('Assets/logo turney.png'); background-size: cover;
+                background-repeat: no-repeat;"></div>
+                <div class="info-title">Lorem Ipsum</div>
+                <div class="info-txt">Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit.Donec nunc ligula, finibus eu est id, ornare sollicitudin urna. Sed pulvinar
+                mattis ornare. Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit.Donec nunc ligula, finibus eu est id, ornare sollicitudin urna. Sed pulvinar
+                mattis ornare Lorem Ipsum.
+                </div>
+            </div>
+            <div class="info-cont" id="matches-V">
+                <div class="s-logo" style="background-image: url('Assets/esl-logo-vector.svg'); background-size: cover;
+                background-repeat: no-repeat;"></div>
+                <div class="l-logo" style="background-image: url('Assets/logo turney.png'); background-size: cover;
+                background-repeat: no-repeat;"></div>
+                <div class="info-title">Lorem Ipsum</div>
+                <div class="info-txt">Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit.Donec nunc ligula, finibus eu est id, ornare sollicitudin urna. Sed pulvinar
+                mattis ornare. Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit.Donec nunc ligula, finibus eu est id, ornare sollicitudin urna. Sed pulvinar
+                mattis ornare Lorem Ipsum.
+                </div>
+            </div>
+
+
+            <div class="recent-title">Past Results</div>
+            <div class="recent-cont" id="matches-PUBGM">
+                <div class="recent-card">
+                    <div class="card-ovl"></div>
+                    <div class="card-line-top"></div>
+                    <div class="card-line-ctr1"></div>
+                    <div class="card-line-ctr2"></div>
+                    <div class="card-line-btm1"></div>
+                    <div class="card-line-btm2"></div>
+                    <div class="card-date">XX February 2023</div>
+                    <div class="card-i">BO3</div>
+                    <div class="card-logo1" style="background-image: url('Assets/LOGO_RRQ_orange_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-logo2" style="background-image: url('Assets/CREUX_logo_all white_png_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-title">Pro Gaming Series II</div>
+                    <div class="card-vs">VS</div>
+                    <div class="card-numb1">1</div>
+                    <div class="card-numb2">2</div>
+                </div>
+                <div class="recent-card">
+                    <div class="card-ovl"></div>
+                    <div class="card-line-top"></div>
+                    <div class="card-line-ctr1"></div>
+                    <div class="card-line-ctr2"></div>
+                    <div class="card-line-btm1"></div>
+                    <div class="card-line-btm2"></div>
+                    <div class="card-date">XX February 2023</div>
+                    <div class="card-i">BO3</div>
+                    <div class="card-logo1" style="background-image: url('Assets/LOGO_RRQ_orange_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-logo2" style="background-image: url('Assets/CREUX_logo_all white_png_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-title">Pro Gaming Series II</div>
+                    <div class="card-vs">VS</div>
+                    <div class="card-numb1">1</div>
+                    <div class="card-numb2">2</div>
+                </div>
+                <div class="recent-card">
+                    <div class="card-ovl"></div>
+                    <div class="card-line-top"></div>
+                    <div class="card-line-ctr1"></div>
+                    <div class="card-line-ctr2"></div>
+                    <div class="card-line-btm1"></div>
+                    <div class="card-line-btm2"></div>
+                    <div class="card-date">XX February 2023</div>
+                    <div class="card-i">BO3</div>
+                    <div class="card-logo1" style="background-image: url('Assets/LOGO_RRQ_orange_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-logo2" style="background-image: url('Assets/CREUX_logo_all white_png_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-title">Pro Gaming Series II</div>
+                    <div class="card-vs">VS</div>
+                    <div class="card-numb1">1</div>
+                    <div class="card-numb2">2</div>
+                </div>
+                <div class="recent-card">
+                    <div class="card-ovl"></div>
+                    <div class="card-line-top"></div>
+                    <div class="card-line-ctr1"></div>
+                    <div class="card-line-ctr2"></div>
+                    <div class="card-line-btm1"></div>
+                    <div class="card-line-btm2"></div>
+                    <div class="card-date">XX February 2023</div>
+                    <div class="card-i">BO3</div>
+                    <div class="card-logo1" style="background-image: url('Assets/LOGO_RRQ_orange_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-logo2" style="background-image: url('Assets/CREUX_logo_all white_png_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-title">Pro Gaming Series II</div>
+                    <div class="card-vs">VS</div>
+                    <div class="card-numb1">1</div>
+                    <div class="card-numb2">2</div>
+                </div>
+            </div>
+            <div class="recent-cont" id="matches-ML">
+                <div class="recent-card">
+                    <div class="card-ovl"></div>
+                    <div class="card-line-top"></div>
+                    <div class="card-line-ctr1"></div>
+                    <div class="card-line-ctr2"></div>
+                    <div class="card-line-btm1"></div>
+                    <div class="card-line-btm2"></div>
+                    <div class="card-date">XX February 2023</div>
+                    <div class="card-i">BO3</div>
+                    <div class="card-logo1" style="background-image: url('Assets/LOGO_RRQ_orange_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-logo2" style="background-image: url('Assets/CREUX_logo_all white_png_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-title">Pro Gaming Series II</div>
+                    <div class="card-vs">VS</div>
+                    <div class="card-numb1">1</div>
+                    <div class="card-numb2">2</div>
+                </div>
+                <div class="recent-card">
+                    <div class="card-ovl"></div>
+                    <div class="card-line-top"></div>
+                    <div class="card-line-ctr1"></div>
+                    <div class="card-line-ctr2"></div>
+                    <div class="card-line-btm1"></div>
+                    <div class="card-line-btm2"></div>
+                    <div class="card-date">XX February 2023</div>
+                    <div class="card-i">BO3</div>
+                    <div class="card-logo1" style="background-image: url('Assets/LOGO_RRQ_orange_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-logo2" style="background-image: url('Assets/CREUX_logo_all white_png_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-title">Pro Gaming Series II</div>
+                    <div class="card-vs">VS</div>
+                    <div class="card-numb1">1</div>
+                    <div class="card-numb2">2</div>
+                </div>
+                <div class="recent-card">
+                    <div class="card-ovl"></div>
+                    <div class="card-line-top"></div>
+                    <div class="card-line-ctr1"></div>
+                    <div class="card-line-ctr2"></div>
+                    <div class="card-line-btm1"></div>
+                    <div class="card-line-btm2"></div>
+                    <div class="card-date">XX February 2023</div>
+                    <div class="card-i">BO3</div>
+                    <div class="card-logo1" style="background-image: url('Assets/LOGO_RRQ_orange_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-logo2" style="background-image: url('Assets/CREUX_logo_all white_png_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-title">Pro Gaming Series II</div>
+                    <div class="card-vs">VS</div>
+                    <div class="card-numb1">1</div>
+                    <div class="card-numb2">2</div>
+                </div>
+                <div class="recent-card">
+                    <div class="card-ovl"></div>
+                    <div class="card-line-top"></div>
+                    <div class="card-line-ctr1"></div>
+                    <div class="card-line-ctr2"></div>
+                    <div class="card-line-btm1"></div>
+                    <div class="card-line-btm2"></div>
+                    <div class="card-date">XX February 2023</div>
+                    <div class="card-i">BO3</div>
+                    <div class="card-logo1" style="background-image: url('Assets/LOGO_RRQ_orange_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-logo2" style="background-image: url('Assets/CREUX_logo_all white_png_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-title">Pro Gaming Series II</div>
+                    <div class="card-vs">VS</div>
+                    <div class="card-numb1">1</div>
+                    <div class="card-numb2">2</div>
+                </div>
+            </div>
+            <div class="recent-cont" id="matches-WR">
+                <div class="recent-card">
+                    <div class="card-ovl"></div>
+                    <div class="card-line-top"></div>
+                    <div class="card-line-ctr1"></div>
+                    <div class="card-line-ctr2"></div>
+                    <div class="card-line-btm1"></div>
+                    <div class="card-line-btm2"></div>
+                    <div class="card-date">XX February 2023</div>
+                    <div class="card-i">BO3</div>
+                    <div class="card-logo1" style="background-image: url('Assets/LOGO_RRQ_orange_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-logo2" style="background-image: url('Assets/CREUX_logo_all white_png_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-title">Pro Gaming Series II</div>
+                    <div class="card-vs">VS</div>
+                    <div class="card-numb1">1</div>
+                    <div class="card-numb2">2</div>
+                </div>
+                <div class="recent-card">
+                    <div class="card-ovl"></div>
+                    <div class="card-line-top"></div>
+                    <div class="card-line-ctr1"></div>
+                    <div class="card-line-ctr2"></div>
+                    <div class="card-line-btm1"></div>
+                    <div class="card-line-btm2"></div>
+                    <div class="card-date">XX February 2023</div>
+                    <div class="card-i">BO3</div>
+                    <div class="card-logo1" style="background-image: url('Assets/LOGO_RRQ_orange_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-logo2" style="background-image: url('Assets/CREUX_logo_all white_png_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-title">Pro Gaming Series II</div>
+                    <div class="card-vs">VS</div>
+                    <div class="card-numb1">1</div>
+                    <div class="card-numb2">2</div>
+                </div>
+                <div class="recent-card">
+                    <div class="card-ovl"></div>
+                    <div class="card-line-top"></div>
+                    <div class="card-line-ctr1"></div>
+                    <div class="card-line-ctr2"></div>
+                    <div class="card-line-btm1"></div>
+                    <div class="card-line-btm2"></div>
+                    <div class="card-date">XX February 2023</div>
+                    <div class="card-i">BO3</div>
+                    <div class="card-logo1" style="background-image: url('Assets/LOGO_RRQ_orange_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-logo2" style="background-image: url('Assets/CREUX_logo_all white_png_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-title">Pro Gaming Series II</div>
+                    <div class="card-vs">VS</div>
+                    <div class="card-numb1">1</div>
+                    <div class="card-numb2">2</div>
+                </div>
+                <div class="recent-card">
+                    <div class="card-ovl"></div>
+                    <div class="card-line-top"></div>
+                    <div class="card-line-ctr1"></div>
+                    <div class="card-line-ctr2"></div>
+                    <div class="card-line-btm1"></div>
+                    <div class="card-line-btm2"></div>
+                    <div class="card-date">XX February 2023</div>
+                    <div class="card-i">BO3</div>
+                    <div class="card-logo1" style="background-image: url('Assets/LOGO_RRQ_orange_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-logo2" style="background-image: url('Assets/CREUX_logo_all white_png_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-title">Pro Gaming Series II</div>
+                    <div class="card-vs">VS</div>
+                    <div class="card-numb1">1</div>
+                    <div class="card-numb2">2</div>
+                </div>
+            </div>
+            <div class="recent-cont" id="matches-FF">
+                <div class="recent-card">
+                    <div class="card-ovl"></div>
+                    <div class="card-line-top"></div>
+                    <div class="card-line-ctr1"></div>
+                    <div class="card-line-ctr2"></div>
+                    <div class="card-line-btm1"></div>
+                    <div class="card-line-btm2"></div>
+                    <div class="card-date">XX February 2023</div>
+                    <div class="card-i">BO3</div>
+                    <div class="card-logo1" style="background-image: url('Assets/LOGO_RRQ_orange_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-logo2" style="background-image: url('Assets/CREUX_logo_all white_png_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-title">Pro Gaming Series II</div>
+                    <div class="card-vs">VS</div>
+                    <div class="card-numb1">1</div>
+                    <div class="card-numb2">2</div>
+                </div>
+                <div class="recent-card">
+                    <div class="card-ovl"></div>
+                    <div class="card-line-top"></div>
+                    <div class="card-line-ctr1"></div>
+                    <div class="card-line-ctr2"></div>
+                    <div class="card-line-btm1"></div>
+                    <div class="card-line-btm2"></div>
+                    <div class="card-date">XX February 2023</div>
+                    <div class="card-i">BO3</div>
+                    <div class="card-logo1" style="background-image: url('Assets/LOGO_RRQ_orange_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-logo2" style="background-image: url('Assets/CREUX_logo_all white_png_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-title">Pro Gaming Series II</div>
+                    <div class="card-vs">VS</div>
+                    <div class="card-numb1">1</div>
+                    <div class="card-numb2">2</div>
+                </div>
+                <div class="recent-card">
+                    <div class="card-ovl"></div>
+                    <div class="card-line-top"></div>
+                    <div class="card-line-ctr1"></div>
+                    <div class="card-line-ctr2"></div>
+                    <div class="card-line-btm1"></div>
+                    <div class="card-line-btm2"></div>
+                    <div class="card-date">XX February 2023</div>
+                    <div class="card-i">BO3</div>
+                    <div class="card-logo1" style="background-image: url('Assets/LOGO_RRQ_orange_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-logo2" style="background-image: url('Assets/CREUX_logo_all white_png_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-title">Pro Gaming Series II</div>
+                    <div class="card-vs">VS</div>
+                    <div class="card-numb1">1</div>
+                    <div class="card-numb2">2</div>
+                </div>
+                <div class="recent-card">
+                    <div class="card-ovl"></div>
+                    <div class="card-line-top"></div>
+                    <div class="card-line-ctr1"></div>
+                    <div class="card-line-ctr2"></div>
+                    <div class="card-line-btm1"></div>
+                    <div class="card-line-btm2"></div>
+                    <div class="card-date">XX February 2023</div>
+                    <div class="card-i">BO3</div>
+                    <div class="card-logo1" style="background-image: url('Assets/LOGO_RRQ_orange_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-logo2" style="background-image: url('Assets/CREUX_logo_all white_png_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-title">Pro Gaming Series II</div>
+                    <div class="card-vs">VS</div>
+                    <div class="card-numb1">1</div>
+                    <div class="card-numb2">2</div>
+                </div>
+            </div>
+            <div class="recent-cont" id="matches-V">
+                <div class="recent-card">
+                    <div class="card-ovl"></div>
+                    <div class="card-line-top"></div>
+                    <div class="card-line-ctr1"></div>
+                    <div class="card-line-ctr2"></div>
+                    <div class="card-line-btm1"></div>
+                    <div class="card-line-btm2"></div>
+                    <div class="card-date">XX February 2023</div>
+                    <div class="card-i">BO3</div>
+                    <div class="card-logo1" style="background-image: url('Assets/LOGO_RRQ_orange_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-logo2" style="background-image: url('Assets/CREUX_logo_all white_png_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-title">Pro Gaming Series II</div>
+                    <div class="card-vs">VS</div>
+                    <div class="card-numb1">1</div>
+                    <div class="card-numb2">2</div>
+                </div>
+                <div class="recent-card">
+                    <div class="card-ovl"></div>
+                    <div class="card-line-top"></div>
+                    <div class="card-line-ctr1"></div>
+                    <div class="card-line-ctr2"></div>
+                    <div class="card-line-btm1"></div>
+                    <div class="card-line-btm2"></div>
+                    <div class="card-date">XX February 2023</div>
+                    <div class="card-i">BO3</div>
+                    <div class="card-logo1" style="background-image: url('Assets/LOGO_RRQ_orange_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-logo2" style="background-image: url('Assets/CREUX_logo_all white_png_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-title">Pro Gaming Series II</div>
+                    <div class="card-vs">VS</div>
+                    <div class="card-numb1">1</div>
+                    <div class="card-numb2">2</div>
+                </div>
+                <div class="recent-card">
+                    <div class="card-ovl"></div>
+                    <div class="card-line-top"></div>
+                    <div class="card-line-ctr1"></div>
+                    <div class="card-line-ctr2"></div>
+                    <div class="card-line-btm1"></div>
+                    <div class="card-line-btm2"></div>
+                    <div class="card-date">XX February 2023</div>
+                    <div class="card-i">BO3</div>
+                    <div class="card-logo1" style="background-image: url('Assets/LOGO_RRQ_orange_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-logo2" style="background-image: url('Assets/CREUX_logo_all white_png_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-title">Pro Gaming Series II</div>
+                    <div class="card-vs">VS</div>
+                    <div class="card-numb1">1</div>
+                    <div class="card-numb2">2</div>
+                </div>
+                <div class="recent-card">
+                    <div class="card-ovl"></div>
+                    <div class="card-line-top"></div>
+                    <div class="card-line-ctr1"></div>
+                    <div class="card-line-ctr2"></div>
+                    <div class="card-line-btm1"></div>
+                    <div class="card-line-btm2"></div>
+                    <div class="card-date">XX February 2023</div>
+                    <div class="card-i">BO3</div>
+                    <div class="card-logo1" style="background-image: url('Assets/LOGO_RRQ_orange_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-logo2" style="background-image: url('Assets/CREUX_logo_all white_png_kotak.png'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="card-title">Pro Gaming Series II</div>
+                    <div class="card-vs">VS</div>
+                    <div class="card-numb1">1</div>
+                    <div class="card-numb2">2</div>
+                </div>
+            </div>
+            
+            <div class="mbg-overlay-btm"></div>
+        </section>
+        
+        <!-- news page-->
+        <section id="news">
+            <div class="nbg"></div>
+            <div class="nbg-overlay-btm"></div>
+            <div class="hr-line"></div>
+            <div class="main-n-car">
+                <div class="mn-card">
+                    <div class="mn-image" style="background-image: url('Assets/image dummy1.jpg'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="mn-top-line"></div>
+                    <div class="mn-lbl-ovl">
+                        <div class="mn-lbl-txt">PUBGM</div>
+                    </div>
+                    <div class="mn-date">XX February 2023</div>
+                    <div class="mn-title">Lorem Ipsum dolor sit amet consectuter</div>
+                    <div class="mn-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nunc
+                    ligula, finibus eu est id, ornare sollicitudin urna. Sed pulvinar mattis
+                    ornare. Pellentesque vel nunc erat. Donec quis cursus est. Vestibulum
+                    ante ipsum primis in faucibus orci luctus et ultrices posuere
+                    cubilia curae.</div>
+                    <div class="mn-btn">
+                        <div class="mn-btn-txt">READ MORE</div>
+                    </div>
+                </div>
+            </div>
+            <div class="n-car">
+                <div class="n-card">
+                    <div class="n-image" style="background-image: url('Assets/image dummy1.jpg'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="n-lbl-ovl">
+                        <div class="n-lbl-txt">Mobile Legends</div>
+                    </div>
+                    <div class="n-date">XX February 2023</div>
+                    <div class="n-title">Lorem Ipsum dolor sit amet. consect etur adipiscing elit.</div>
+                </div>
+                <div class="n-card">
+                    <div class="n-image" style="background-image: url('Assets/image dummy1.jpg'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="n-lbl-ovl">
+                        <div class="n-lbl-txt">Mobile Legends</div>
+                    </div>
+                    <div class="n-date">XX February 2023</div>
+                    <div class="n-title">Lorem Ipsum dolor sit amet. consect etur adipiscing elit.</div>
+                </div>
+                <div class="n-card">
+                    <div class="n-image" style="background-image: url('Assets/image dummy1.jpg'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="n-lbl-ovl">
+                        <div class="n-lbl-txt">Mobile Legends</div>
+                    </div>
+                    <div class="n-date">XX February 2023</div>
+                    <div class="n-title">Lorem Ipsum dolor sit amet. consect etur adipiscing elit.</div>
+                </div>
+                <div class="n-card">
+                    <div class="n-image" style="background-image: url('Assets/image dummy1.jpg'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="n-lbl-ovl">
+                        <div class="n-lbl-txt">Mobile Legends</div>
+                    </div>
+                    <div class="n-date">XX February 2023</div>
+                    <div class="n-title">Lorem Ipsum dolor sit amet. consect etur adipiscing elit.</div>
+                </div>
+                <div class="n-card">
+                    <div class="n-image" style="background-image: url('Assets/image dummy1.jpg'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="n-lbl-ovl">
+                        <div class="n-lbl-txt">Mobile Legends</div>
+                    </div>
+                    <div class="n-date">XX February 2023</div>
+                    <div class="n-title">Lorem Ipsum dolor sit amet. consect etur adipiscing elit.</div>
+                </div>
+                <div class="n-card">
+                    <div class="n-image" style="background-image: url('Assets/image dummy1.jpg'); background-size: cover;
+                    background-repeat: no-repeat;"></div>
+                    <div class="n-lbl-ovl">
+                        <div class="n-lbl-txt">Mobile Legends</div>
+                    </div>
+                    <div class="n-date">XX February 2023</div>
+                    <div class="n-title">Lorem Ipsum dolor sit amet. consect etur adipiscing elit.</div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- partners page-->
+        <section id="partners">
+            <div class="pbg"></div>
+            <div class="pbg-overlay-btm"></div>
+            <div class="plogo-cont">
+                <div class="plogo" style="background-image: url('Assets/plogo-sekdes.png'); background-size: cover;
+                background-repeat: no-repeat;"></div>
+                <div class="plogo" style="background-image: url('Assets/plogo-soizee.png'); background-size: cover;
+                background-repeat: no-repeat;"></div>
+                <div class="plogo" style="background-image: url('Assets/plogo-garlic.png'); background-size: cover;
+                background-repeat: no-repeat;"></div>
+                <div class="plogo" style="background-image: url('Assets/plogo-goto.png'); background-size: cover;
+                background-repeat: no-repeat;"></div>
+                <div class="plogo" style="background-image: url('Assets/plogo-tiket.png'); background-size: cover;
+                background-repeat: no-repeat;"></div>
+                <div class="plogo" style="background-image: url('Assets/plogo-shopee.png'); background-size: cover;
+                background-repeat: no-repeat;"></div>
+                <div class="plogo" style="background-image: url('Assets/plogo-airasia.png'); background-size: cover;
+                background-repeat: no-repeat;"></div>
+                <div class="plogo" style="background-image: url('Assets/plogo-travel.png'); background-size: cover;
+                background-repeat: no-repeat;"></div>
+            </div>
+            <div class="ptitle">Our Partners</div>
+            <div class="ptxt">Lorem ipsum dolor sit amet, consectetur adipiscing
+            elit. Donec nuncligula, finibus eu est id, ornare solli
+            citudin urna. Sed pulvinar mattis ornare. Pellentesque
+            vel nunc erat. Donec quis cursus est. Vestibulumante
+            ipsum primis in faucibus orci luctus et ultrices posuere
+            cubilia curae.</div>
+        </section>
+
+        <!-- contacts page-->
+        <section id="contact">
+            <div class="cbg"></div>
+            <div class="cbg-overlay-btm"></div>
+            <div class="map-cont">
+                <div class="cmap">
+                    <div class="mapouter">
+                        <div class="gmap_canvas">
+                            <iframe width="600" height="500" id="gmap_canvas"
+                            src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                            </iframe>
+                                <a href="https://123movies-to.org"></a>
+                                <br><style>.mapouter{position:relative;text-align:right;height:100%;width:100%;}</style>
+                                <a href="https://www.embedgooglemap.net">google maps embed iframe generator</a>
+                                <style>.gmap_canvas {overflow:hidden;background:none!important;height:100%;width:100%;}</style>
+                        </div>
+                    </div>
+                </div>
+                <div class="c-add">Address</div>
+                <div class="c-add-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nuncligula,
+                finibus eu est id, ornare solli citudin urna.</div>
+                <div class="c-partner">Partnership</div>
+                <div class="c-p-phone">Phone Number</div>
+                <div class="c-p-phone-txt">0888XXXXXXXXX</div>
+                <div class="c-p-email">Email</div>
+                <div class="c-p-email-txt">contact@creux.co</div>
+            </div>
+            <div class="input-cont">
+                <div class="name">Name</div>
+                <div class="name-line"></div>
+                <div class="email">Email</div>
+                <div class="email-line"></div>
+                <div class="comment">Comment</div>
+                <div class="comment-line"></div>
+                <div class="input-btn">
+                    <div class="input-btn-txt">SUBMIT</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- footer -->
+        <div class="footer">
+            <div class="ftr-logo" style="background-image: url('Assets/CREUX_logo_all white_png.png'); background-size: cover;
+            background-repeat: no-repeat;"></div>
+            <div class="ftr-copyright">©creuxteam</div>
+            <div class="socmed-cont">
+                <div class="socmed-icon" style="background-image: url('Assets/tiktok.svg'); background-size: cover;
+                background-repeat: no-repeat;"></div>
+                <div class="socmed-icon" style="background-image: url('Assets/yutub.svg'); background-size: cover;
+                background-repeat: no-repeat;"></div>
+                <div class="socmed-icon" style="background-image: url('Assets/twitter.svg'); background-size: cover;
+                background-repeat: no-repeat;"></div>
+                <div class="socmed-icon" style="background-image: url('Assets/fb.svg'); background-size: cover;
+                background-repeat: no-repeat;"></div>
+                <div class="socmed-icon" style="background-image: url('Assets/ig.svg'); background-size: cover;
+                background-repeat: no-repeat;"></div>
+            </div>
+            <div class="ftr-email-txt">contact@creux.co</div>
+        </div>
+
+        <!-- horizontal scroll -->
+        <script>
+            const scrollContainer1 = document.querySelector(".partners-car");
+            const scrollContainer2 = document.querySelector(".matches-car");
+            const scrollContainer3 = document.querySelector(".teams-car");
+            const scrollContainer4 = document.querySelector(".g-teams-car-cont-ml");
+            const scrollContainer5 = document.querySelector(".g-teams-car-cont-pubgm");
+            const scrollContainer6 = document.querySelector(".g-teams-car-cont-wr");
+
+            [scrollContainer1, scrollContainer2,
+            scrollContainer3, scrollContainer4,
+            scrollContainer5, scrollContainer6,].forEach((scrollContainer)=>{
+                scrollContainer.addEventListener("wheel", (evt) => {
+                    evt.preventDefault();
+                    scrollContainer.scrollLeft += evt.deltaY;
+                });
+            });
+        </script>
+    </body>
+</html>
